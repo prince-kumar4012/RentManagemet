@@ -1,0 +1,22 @@
+:root {
+  --color-teal:        #00A3AD;
+  --color-teal-dark:   #007f88;
+  --color-teal-light:  #e0f7f8;
+
+  --color-orange:      #FF9900;
+  --color-orange-dark: #cc7a00;
+  --color-orange-light:#fff3e0;
+
+  --color-green:       #22c55e;
+  --color-green-dark:  #16a34a;
+  --color-green-light: #dcfce7;
+
+  --color-navy:        #11284A;
+  --color-navy-light:  #1e3a5f;
+  --color-red:         #AE2721;
+  --color-red-light:   #fdecea;
+
+  --color-bg:          #ffffff;
+  --color-white:       #ffffff;
+  --color-border:      #e2e8f0;
+}

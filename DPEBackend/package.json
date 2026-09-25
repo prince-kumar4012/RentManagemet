@@ -1,0 +1,29 @@
+{
+  "name": "dpe-backend",
+  "version": "2.0.0",
+  "description": "Delhi Property Exchange Clean Modular MVC Backend API",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test"
+  },
+  "keywords": [
+    "real-estate",
+    "property-exchange",
+    "delhi",
+    "express",
+    "mongoose"
+  ],
+  "author": "Antigravity AI",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.3.1"
+  }
+}
