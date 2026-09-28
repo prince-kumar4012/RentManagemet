@@ -13,6 +13,7 @@ const rubik = Rubik({
   style: ['normal', 'italic'],
   display: 'swap',
   variable: '--font-rubik',
+  preload: false,
 });
 
 const notoDevanagari = Noto_Sans_Devanagari({
@@ -20,6 +21,7 @@ const notoDevanagari = Noto_Sans_Devanagari({
   weight: ['400', '500', '600', '700', '800'],
   variable: '--font-devanagari',
   display: 'swap',
+  preload: false,
 });
 
 export const metadata = {

@@ -9,18 +9,20 @@ import { SITE_CONFIG } from '@/config/site.config';
 
 const NAV_LINKS = {
   en: [
-    { label: 'Home',           href: '/' },
-    { label: 'About',          href: '/about' },
-    { label: 'Chander Vihar Impact', href: '/chander-vihar-initiatives' },
-    { label: 'How We Connect', href: '/how-we-work' },
-    { label: 'Contact',        href: '/contact' },
+    { label: 'Home',             href: '/' },
+    { label: 'Hamara Safar',     href: '/#hamara-safar' },
+    { label: 'About',            href: '/about' },
+    { label: 'CV Impact',        href: '/chander-vihar-initiatives' },
+    { label: 'How We Work',      href: '/how-we-work' },
+    { label: 'Contact',          href: '/contact' },
   ],
   hi: [
-    { label: 'होम',            href: '/' },
-    { label: 'हमारे बारे में',  href: '/about' },
-    { label: 'चंदर विहार विकास', href: '/chander-vihar-initiatives' },
-    { label: 'हम कैसे जोड़ते हैं', href: '/how-we-work' },
-    { label: 'संपर्क',         href: '/contact' },
+    { label: 'होम',              href: '/' },
+    { label: 'हमारा सफर',        href: '/#hamara-safar' },
+    { label: 'हमारे बारे में',   href: '/about' },
+    { label: 'CV विकास',         href: '/chander-vihar-initiatives' },
+    { label: 'कैसे काम करते हैं', href: '/how-we-work' },
+    { label: 'संपर्क',           href: '/contact' },
   ],
 };
 
@@ -37,8 +39,8 @@ export default function Header() {
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <span className="text-slate-400 font-medium">
             {lang === 'en'
-              ? `${SITE_CONFIG.primaryLocality} & ${SITE_CONFIG.secondaryLocality} — Your trusted local property network`
-              : `${SITE_CONFIG.primaryLocality} और ${SITE_CONFIG.secondaryLocality} — आपका भरोसेमंद स्थानीय प्रॉपर्टी नेटवर्क`}
+              ? `${SITE_CONFIG.tagline} — ${SITE_CONFIG.founderName}`
+              : `${SITE_CONFIG.taglineHi} — ${SITE_CONFIG.founderName}`}
           </span>
           <div className="flex items-center gap-4 font-semibold">
             <a
@@ -76,12 +78,12 @@ export default function Header() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-1 text-sm font-extrabold text-slate-700">
+          <nav className="hidden lg:flex items-center gap-1 text-xs lg:text-sm font-extrabold text-slate-700">
             {links.map((link) => (
               <Link
                 key={link.href + link.label}
                 href={link.href}
-                className={`px-3.5 py-2 rounded-xl transition-all whitespace-nowrap ${
+                className={`px-2.5 py-2 lg:px-3.5 rounded-xl transition-all whitespace-nowrap ${
                   pathname === link.href
                     ? 'text-dpxTeal bg-dpxTealLight'
                     : 'hover:text-dpxTeal hover:bg-slate-100'

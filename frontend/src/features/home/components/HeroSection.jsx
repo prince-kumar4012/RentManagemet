@@ -1,140 +1,157 @@
 'use client';
 
-import { Phone, MessageCircle, ChevronRight } from 'lucide-react';
+import { Phone, MessageCircle, MapPin, ChevronRight, CheckCircle2 } from 'lucide-react';
 import { SITE_CONFIG } from '@/config/site.config';
 
 export default function HeroSection({ content, isHi, onOpenInquiry }) {
   return (
-    <section
-      className="relative overflow-hidden min-h-[88vh] flex items-center py-16 lg:py-24"
-      style={{
-        backgroundImage: "url('/images/banners/heroBanner.jpg')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-    >
-      {/* Dynamic Layered Overlays */}
-      <div
-        className="absolute inset-0 z-0"
-        style={{
-          background:
-            'radial-gradient(circle at 20% 30%, rgba(17,40,74,0.85) 0%, rgba(10,20,40,0.95) 70%, rgba(10,20,40,0.98) 100%)',
-        }}
-      />
-      <div className="absolute inset-0 z-0 bg-[radial-gradient(#00A3AD_1px,transparent_1px)] [background-size:32px_32px] opacity-10" />
+    <div>
+      {/* ── MAIN HERO ── */}
+      <section className="relative overflow-hidden">
+        <div className="flex flex-col lg:flex-row min-h-[88vh] lg:min-h-[90vh]">
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-12 items-center w-full">
-        {/* Left Content (Cols 7) */}
-        <div className="lg:col-span-7">
-          {/* Locality Tag */}
-          <div className="inline-flex items-center gap-2 bg-dpxTeal/20 border border-dpxTeal/40 px-3.5 py-1.5 rounded-lg mb-6 text-dpxTeal text-xs font-black uppercase tracking-wider">
-            <span className="w-2 h-2 rounded-full bg-dpxTeal" />
-            <span>{content.badge}</span>
-          </div>
+          {/* ── LEFT: White content panel ── */}
+          <div className="relative flex items-center bg-white px-6 sm:px-10 lg:px-14 xl:px-20 py-12 lg:py-0 z-10 lg:w-[48%] xl:w-[44%] shrink-0">
+            {/* Soft right-edge fade into image */}
+            <div className="hidden lg:block absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white via-white/70 to-transparent z-20 pointer-events-none" />
 
-          <h1
-            className={`font-black text-white leading-[1.08] tracking-tight mb-5 ${
-              isHi ? 'text-4xl sm:text-5xl lg:text-[56px]' : 'text-4xl sm:text-5xl lg:text-[60px]'
-            }`}
-          >
-            {content.h1_line1}
-            <br />
-            <span className="text-dpxTeal">
-              {content.h1_line2}
-            </span>
-          </h1>
+            <div className="max-w-lg w-full">
+              {/* Location badge */}
+              <div className="inline-flex items-center gap-1.5 mb-6">
+                <MapPin className="w-3.5 h-3.5 text-dpxTeal" />
+                <span className="text-dpxTeal text-[11px] font-black uppercase tracking-[0.18em]">
+                  Chander Vihar • Delhi
+                </span>
+              </div>
 
-          <p className="text-dpxOrange font-bold text-base sm:text-lg mb-6 tracking-wide flex items-center gap-2">
-            <span className="w-8 h-0.5 bg-dpxOrange rounded-full" />
-            {content.tagline}
-          </p>
+              {/* H1 */}
+              <h1 className={`font-black text-dpxNavy leading-[1.05] tracking-tight mb-4 ${
+                isHi
+                  ? 'text-3xl sm:text-4xl lg:text-[44px]'
+                  : 'text-4xl sm:text-5xl lg:text-[52px]'
+              }`}>
+                {content.h1_line1}
+                <br />
+                <span className="text-dpxTeal">{content.h1_line2}</span>
+              </h1>
 
-          <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl font-normal">
-            {content.hero_body}
-          </p>
-
-          {/* Action CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-10">
-            <button
-              onClick={() => onOpenInquiry && onOpenInquiry('Rent')}
-              className="inline-flex items-center justify-center gap-2.5 bg-dpxTeal hover:bg-dpxTealDark text-white px-8 py-4 rounded-xl text-base font-black shadow-lg shadow-teal-500/20 hover:-translate-y-0.5 transition-all duration-200"
-            >
-              <Phone className="w-5 h-5" />
-              {content.cta1}
-            </button>
-            <a
-              href={`https://wa.me/${SITE_CONFIG.rawWhatsapp}?text=Hi%2C%20I%20want%20to%20connect%20regarding%20a%20property%20in%20Chander%20Vihar`}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center justify-center gap-2.5 bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-xl text-base font-black shadow-lg shadow-emerald-500/20 hover:-translate-y-0.5 transition-all duration-200"
-            >
-              <MessageCircle className="w-5 h-5" />
-              {content.cta2}
-            </a>
-          </div>
-
-          <div className="border-l-2 border-dpxTeal/80 pl-4 py-1">
-            <p className="text-slate-400 text-xs sm:text-sm font-semibold italic">
-              {content.hero_support}
-            </p>
-          </div>
-        </div>
-
-        {/* Right Panel (Cols 5) */}
-        <div className="lg:col-span-5 flex justify-center lg:justify-end">
-          <div className="w-full max-w-[420px] bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-7 text-white shadow-2xl">
-            <p className="text-xs font-black text-dpxTeal uppercase tracking-widest mb-4 pb-2">
-              {content.hero_secondary}
-            </p>
-            
-            <div className="grid grid-cols-2 gap-3 mb-6">
-              {content.services.map((s) => {
-                const Icon = s.icon;
-                return (
-                  <div
-                    key={s.title}
-                    onClick={() => onOpenInquiry && onOpenInquiry(s.title)}
-                    className="group bg-slate-800/60 hover:bg-slate-800 border border-slate-700/60 hover:border-dpxTeal/50 rounded-xl p-3.5 transition-all duration-200 cursor-pointer flex flex-col justify-between"
-                  >
-                    <div
-                      className="w-9 h-9 rounded-lg flex items-center justify-center mb-3 transition-transform group-hover:scale-105"
-                      style={{ background: `${s.color}25`, border: `1px solid ${s.color}40` }}
-                    >
-                      <Icon className="w-4 h-4" style={{ color: s.color }} />
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <p className="font-black text-sm text-white">{s.title}</p>
-                      <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-dpxTeal group-hover:translate-x-1 transition-all" />
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-
-            <div className="pt-4">
-              <p className="text-xs text-slate-300 font-semibold mb-3">
-                {isHi ? 'हमसे सीधे संपर्क करें:' : 'Reach us directly:'}
+              {/* Tagline */}
+              <p className="text-dpxOrange font-bold text-base sm:text-lg mb-5 leading-snug">
+                {content.tagline}
               </p>
-              <div className="grid grid-cols-2 gap-2.5">
+
+              {/* Body */}
+              <p className="text-slate-500 text-sm sm:text-base leading-relaxed mb-8 font-normal max-w-md">
+                {content.hero_body}
+              </p>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-wrap gap-3 mb-7">
                 <a
                   href={`tel:${SITE_CONFIG.rawPhone}`}
-                  className="text-center bg-white/10 hover:bg-dpxOrange text-white py-2.5 rounded-xl text-xs font-black transition border border-white/10"
+                  className="inline-flex items-center gap-2 bg-dpxNavy/8 backdrop-blur-sm border border-dpxNavy/25 text-dpxNavy hover:bg-dpxNavy hover:text-white px-6 py-3.5 rounded-xl font-black text-sm transition-all duration-200 shadow-sm hover:shadow-md"
                 >
-                  {SITE_CONFIG.rawPhone}
+                  <Phone className="w-4 h-4" />
+                  {isHi ? 'Call Karo' : 'Talk to Us'}
+                  <ChevronRight className="w-4 h-4" />
                 </a>
                 <a
-                  href={`https://wa.me/${SITE_CONFIG.rawWhatsapp}`}
+                  href={`https://wa.me/${SITE_CONFIG.rawWhatsapp}?text=Namaste%20Gullu%20ji%2C%20main%20Chander%20Vihar%20se%20connect%20karna%20chahta%20hoon`}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-center bg-emerald-500/20 hover:bg-emerald-500 text-white py-2.5 rounded-xl text-xs font-black transition border border-emerald-500/30"
+                  className="inline-flex items-center gap-2 bg-emerald-500/12 backdrop-blur-sm border border-emerald-500/30 text-emerald-700 hover:bg-emerald-500 hover:border-emerald-500 hover:text-white px-6 py-3.5 rounded-xl font-black text-sm transition-all duration-200 shadow-sm hover:shadow-md"
                 >
-                  WhatsApp
+                  <MessageCircle className="w-4 h-4" />
+                  {isHi ? 'WhatsApp Karo' : 'WhatsApp Us'}
                 </a>
               </div>
+
+              {/* Support note */}
+              <p className="text-slate-400 text-xs font-medium italic border-l-2 border-dpxTeal/40 pl-3 leading-relaxed">
+                {content.hero_support}
+              </p>
             </div>
           </div>
+
+          {/* ── RIGHT: banner2 full image panel ── */}
+          <div className="relative flex-1 min-h-[60vw] sm:min-h-[420px] lg:min-h-0 overflow-hidden">
+            {/* banner2.jpg — Delhi city + Metro + Pajji */}
+            <img
+              src="/images/banners/banner2.jpg"
+              alt="Chander Vihar — A Stronger Community"
+              className="absolute inset-0 w-full h-full object-cover object-right-top"
+            />
+
+            {/* Blend gradient on left edge (joins white panel) */}
+            <div className="absolute inset-0 bg-gradient-to-r from-white/55 via-white/10 to-transparent pointer-events-none" />
+
+            {/* Cursive tagline overlay — top-left of image panel */}
+            <div className="absolute top-8 left-10 sm:left-14 z-10">
+              <p
+                className="text-white leading-snug drop-shadow-[0_2px_12px_rgba(0,0,0,0.55)]"
+                style={{
+                  fontFamily: "'Georgia','Times New Roman',serif",
+                  fontStyle: 'italic',
+                  fontWeight: 600,
+                  fontSize: 'clamp(1.1rem, 2.2vw, 1.75rem)',
+                }}
+              >
+                A Stronger<br />
+                Chander Vihar<br />
+                Together
+              </p>
+            </div>
+          </div>
+
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* ── 3 QUICK-ACCESS CARDS ── */}
+      <section className="bg-white border-b border-slate-100 py-10 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-center text-xs font-black text-slate-400 uppercase tracking-widest mb-6">
+            {content.quick_label}
+          </p>
+          <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-5">
+            {content.quick_cards.map((card) => {
+              const Icon = card.icon;
+              return (
+                <button
+                  key={card.title}
+                  onClick={() => onOpenInquiry && onOpenInquiry(card.title)}
+                  className="group text-left bg-slate-50 hover:bg-white border border-slate-200 hover:border-dpxTeal/50 rounded-2xl p-5 transition-all duration-300 hover:shadow-md"
+                >
+                  <div className="flex items-start gap-3 mb-4">
+                    <div
+                      className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 backdrop-blur-sm"
+                      style={{ background: card.bg, border: `1px solid ${card.color}30` }}
+                    >
+                      <Icon className="w-5 h-5" style={{ color: card.color }} />
+                    </div>
+                    <div>
+                      <p className="font-black text-dpxNavy text-sm leading-tight">{card.title}</p>
+                      <p className="text-xs font-semibold mt-0.5" style={{ color: card.color }}>{card.titleHi}</p>
+                    </div>
+                  </div>
+                  <p className="text-slate-500 text-xs leading-relaxed mb-4">{card.desc}</p>
+                  <ul className="space-y-1 mb-4">
+                    {card.items.map((item) => (
+                      <li key={item} className="flex items-center gap-2 text-xs text-slate-600 font-medium">
+                        <CheckCircle2 className="w-3.5 h-3.5 shrink-0" style={{ color: card.color }} />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="flex items-center justify-between pt-3 border-t border-slate-100">
+                    <span className="text-xs font-black" style={{ color: card.color }}>{card.cta}</span>
+                    <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" style={{ color: card.color }} />
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

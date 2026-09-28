@@ -24,7 +24,7 @@ export default function StorySection({ content, isHi }) {
 
           <Link
             href="/about"
-            className="inline-flex items-center gap-2.5 bg-dpxNavy hover:bg-slate-800 text-white font-black px-7 py-3.5 rounded-xl text-sm transition shadow-md"
+            className="inline-flex items-center gap-2.5 bg-dpxNavy/10 backdrop-blur-sm border border-dpxNavy/20 text-dpxNavy hover:bg-dpxNavy hover:text-white font-black px-7 py-3.5 rounded-xl text-sm transition-all duration-200 shadow-sm hover:shadow-md"
           >
             <span>{isHi ? 'पूरी कहानी पढ़ें' : 'Read Our Full Story'}</span>
             <ArrowRight className="w-4 h-4 text-dpxTeal" />

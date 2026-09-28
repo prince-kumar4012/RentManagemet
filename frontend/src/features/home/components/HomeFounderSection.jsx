@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { ArrowRight, ExternalLink, CheckCircle2 } from 'lucide-react';
+import { SITE_CONFIG } from '@/config/site.config';
 
 export default function HomeFounderSection({ content, isHi }) {
   if (!content.founder_title) return null;
@@ -12,18 +13,19 @@ export default function HomeFounderSection({ content, isHi }) {
         {/* Left: Founder Portrait Card */}
         <div className="lg:col-span-5 flex justify-center">
           <div className="w-full max-w-sm rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-lg">
-            <div className="relative h-[400px] sm:h-[440px] w-full overflow-hidden">
+            <div className="relative h-56 sm:h-72 lg:h-[400px] w-full overflow-hidden">
               <img
                 src="/images/sukhvinder-pajji.jpg"
-                alt="Sukhvinder Pajji"
+                alt={SITE_CONFIG.founderName}
                 className="w-full h-full object-cover object-top"
+                onError={(e) => { e.target.style.display = 'none'; }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-transparent" />
             </div>
 
             {/* Bottom Badge */}
             <div className="p-5 text-center bg-white border-t border-slate-100">
-              <h3 className="font-black text-dpxNavy text-xl tracking-tight mb-1">Sukhvinder Pajji</h3>
+              <h3 className="font-black text-dpxNavy text-xl tracking-tight mb-1">{SITE_CONFIG.founderAlias}</h3>
               <p className="text-dpxTeal text-xs font-bold uppercase tracking-wider">
                 {content.founder_badge || (isHi ? 'संस्थापक व कम्युनिटी लीडर' : 'Founder & Community Lead')}
               </p>
@@ -69,7 +71,7 @@ export default function HomeFounderSection({ content, isHi }) {
           <div className="flex flex-wrap items-center gap-4">
             <Link
               href="/chander-vihar-initiatives"
-              className="inline-flex items-center gap-2 bg-dpxNavy hover:bg-slate-800 text-white font-black px-6 py-3.5 rounded-xl text-sm transition shadow-md"
+              className="inline-flex items-center gap-2 bg-dpxNavy/10 backdrop-blur-sm border border-dpxNavy/20 text-dpxNavy hover:bg-dpxNavy hover:text-white font-black px-6 py-3.5 rounded-xl text-sm transition-all duration-200 shadow-sm hover:shadow-md"
             >
               <span>{content.founder_cta}</span>
               <ArrowRight className="w-4 h-4 text-dpxTeal" />
@@ -79,7 +81,7 @@ export default function HomeFounderSection({ content, isHi }) {
                 href={content.founder_fb_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-dpxNavy font-bold px-6 py-3.5 rounded-xl text-sm transition border border-slate-200"
+                className="inline-flex items-center gap-2 bg-white backdrop-blur-sm border border-slate-200 text-dpxNavy font-bold px-6 py-3.5 rounded-xl text-sm transition-all duration-200 shadow-sm hover:shadow-md hover:border-dpxTeal/40"
               >
                 <span>{content.founder_fb_cta}</span>
                 <ExternalLink className="w-4 h-4 text-slate-500" />

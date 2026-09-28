@@ -52,9 +52,9 @@ export default function InquiryModal({ isOpen, onClose, initialService = 'Rent' 
             <Building2 className="w-4 h-4" />
             Quick Property Inquiry
           </div>
-          <h3 className="text-xl font-black text-white">Start Your Property Conversation</h3>
+          <h3 className="text-xl font-black text-white">Apni Zaroorat Batao</h3>
           <p className="text-slate-400 text-xs mt-1">
-            Share your requirement for Chander Vihar &amp; Nilothi. We will connect you directly.
+            Chander Vihar &amp; Nilothi — Seedha Connect Karo
           </p>
         </div>
 
@@ -83,8 +83,8 @@ export default function InquiryModal({ isOpen, onClose, initialService = 'Rent' 
               <label className="block text-xs font-black text-slate-500 uppercase tracking-wider mb-2">
                 I want to:
               </label>
-              <div className="grid grid-cols-4 gap-2">
-                {['Buy', 'Sell', 'Rent', 'Support'].map((item) => (
+              <div className="grid grid-cols-3 gap-2">
+                {['Buy', 'Sell', 'Rent', 'Godown', 'Shop', 'Help'].map((item) => (
                   <button
                     key={item}
                     type="button"
@@ -114,6 +114,10 @@ export default function InquiryModal({ isOpen, onClose, initialService = 'Rent' 
                 >
                   <option value="Chander Vihar">Chander Vihar</option>
                   <option value="Nilothi">Nilothi</option>
+                  <option value="Teacher Vihar">Teacher Vihar</option>
+                  <option value="Uday Vihar">Uday Vihar</option>
+                  <option value="Mundka">Mundka</option>
+                  <option value="Nilothi Extn">Nilothi Extn</option>
                   <option value="Paschim Vihar">Paschim Vihar</option>
                   <option value="Uttam Nagar">Uttam Nagar</option>
                 </select>
@@ -132,6 +136,8 @@ export default function InquiryModal({ isOpen, onClose, initialService = 'Rent' 
                   <option value="2 BHK">2 BHK</option>
                   <option value="3 BHK">3 BHK</option>
                   <option value="Plot / Commercial">Plot / Commercial</option>
+                  <option value="Godown/Shed">Godown/Shed</option>
+                  <option value="Shop/Office">Shop/Office</option>
                 </select>
               </div>
             </div>

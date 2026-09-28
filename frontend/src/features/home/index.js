@@ -4,9 +4,12 @@ import { useState } from 'react';
 import { useLanguage } from '@/context/LanguageContext';
 import HOME_CONTENT from './content/home.content';
 import HeroSection from './components/HeroSection';
+import StatsSection from './components/StatsSection';
 import ServicesSection from './components/ServicesSection';
 import StorySection from './components/StorySection';
+import HamaraSafarSection from './components/HamaraSafarSection';
 import HowItWorksSection from './components/HowItWorksSection';
+import MediaSection from './components/MediaSection';
 import DifferenceSection from './components/DifferenceSection';
 import HomeFounderSection from './components/HomeFounderSection';
 import CommunitySection from './components/CommunitySection';
@@ -29,9 +32,12 @@ export function HomeView() {
   return (
     <div className={isHi ? 'devanagari' : ''}>
       <HeroSection content={content} isHi={isHi} onOpenInquiry={handleOpenInquiry} />
+      <StatsSection isHi={isHi} />
       <ServicesSection content={content} isHi={isHi} onOpenInquiry={handleOpenInquiry} />
+      <HamaraSafarSection content={content} />
       <StorySection content={content} isHi={isHi} />
       <HowItWorksSection content={content} onOpenInquiry={handleOpenInquiry} />
+      <MediaSection content={content} />
       <DifferenceSection content={content} />
       <HomeFounderSection content={content} isHi={isHi} />
       <CommunitySection isHi={isHi} />

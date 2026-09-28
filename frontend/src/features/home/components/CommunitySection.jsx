@@ -4,8 +4,8 @@ import { Users } from 'lucide-react';
 
 export default function CommunitySection({ isHi }) {
   const tags = isHi
-    ? ['प्रॉपर्टी तलाशने वाले', 'प्रॉपर्टी मालिक', 'खरीदार और विक्रेता', 'किरायेदार और मकान मालिक', 'प्रॉपर्टी प्रोफेशनल्स']
-    : ['Property Seekers', 'Property Owners', 'Buyers & Sellers', 'Tenants & Landlords', 'Property Professionals'];
+    ? ['Property Seekers', 'Property Owners', 'Godown Seekers', 'Shop Owners', 'Sarkari Help चाहिए', 'Community Members']
+    : ['Property Seekers', 'Property Owners', 'Godown Seekers', 'Shop Owners', 'Sarkari Help Seekers', 'Community Members'];
 
   return (
     <section className="bg-white py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
@@ -15,13 +15,13 @@ export default function CommunitySection({ isHi }) {
         </div>
         <h2 className="text-2xl sm:text-3xl font-black text-dpxNavy mb-4 tracking-tight">
           {isHi
-            ? 'चंदर विहार केवल एक इलाका नहीं है — यह एक कम्युनिटी है।'
-            : 'Chander Vihar Is Not Just a Locality — It Is a Community.'}
+            ? 'चंदर विहार केवल एक इलाका नहीं — यह हमारी Community है।'
+            : 'Chander Vihar Is Not Just a Locality — It Is Our Community.'}
         </h2>
         <p className="text-slate-600 text-base leading-relaxed max-w-2xl mx-auto mb-10 font-normal">
           {isHi
-            ? 'कम्युनिटी तब मजबूत बनती है जब उसमें रहने वाले लोग एक-दूसरे पर भरोसा कर सकें, खुलकर बातचीत कर सकें और सही जानकारी के साथ फैसले ले सकें।'
-            : 'Communities grow stronger when people can trust one another, communicate openly and make informed decisions.'}
+            ? 'Property, सरकारी काम, या community support — CVP Exchange और Gullu ji की team सबके लिए available है।'
+            : 'Property, Sarkari kaam, ya community support — CVP Exchange aur Gullu ji ki team sab ke liye available hai.'}
         </p>
         <div className="flex flex-wrap justify-center gap-4 sm:gap-5">
           {tags.map((tag) => (

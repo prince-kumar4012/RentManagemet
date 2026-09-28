@@ -5,8 +5,8 @@ import { SITE_CONFIG } from '@/config/site.config';
 
 export default function CtaSection({ content, isHi, onOpenInquiry }) {
   const checkItems = isHi
-    ? ['स्थानीय फोकस', 'ईमानदार बातचीत', 'भरोसेमंद कनेक्शन']
-    : ['Local Focus', 'Honest Conversations', 'Trusted Connections'];
+    ? ['Property · Godown · Shop', 'PM-UDAY Help Desk', 'Community Support']
+    : ['Property · Godown · Shop', 'PM-UDAY Help Desk', 'Community Support'];
 
   return (
     <section className="bg-white py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
@@ -20,19 +20,19 @@ export default function CtaSection({ content, isHi, onOpenInquiry }) {
         <p className="text-slate-600 text-lg leading-relaxed mb-10 font-normal">{content.cta_body}</p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
-          <button
-            onClick={() => onOpenInquiry && onOpenInquiry('Rent')}
-            className="inline-flex items-center justify-center gap-2.5 bg-dpxTeal hover:bg-dpxTealDark text-white px-9 py-4 rounded-xl text-base font-black shadow-md transition"
-          >
-            <Phone className="w-5 h-5" /> {content.cta_btn1}
-          </button>
           <a
             href={`https://wa.me/${SITE_CONFIG.rawWhatsapp}`}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center justify-center gap-2.5 bg-emerald-500 hover:bg-emerald-600 text-white px-9 py-4 rounded-xl text-base font-black shadow-md transition"
+            className="inline-flex items-center justify-center gap-2.5 bg-emerald-500/15 backdrop-blur-md border border-emerald-400/35 text-emerald-700 hover:bg-emerald-500 hover:border-emerald-500 hover:text-white px-9 py-4 rounded-xl text-base font-black shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
           >
-            <MessageCircle className="w-5 h-5" /> {content.cta_btn2}
+            <MessageCircle className="w-5 h-5" /> {content.cta_btn1}
+          </a>
+          <a
+            href={`tel:${SITE_CONFIG.rawPhone}`}
+            className="inline-flex items-center justify-center gap-2.5 bg-dpxTeal/12 backdrop-blur-md border border-dpxTeal/30 text-dpxTeal hover:bg-dpxTeal hover:border-dpxTeal hover:text-white px-9 py-4 rounded-xl text-base font-black shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
+          >
+            <Phone className="w-5 h-5" /> {content.cta_btn2}
           </a>
         </div>
 
