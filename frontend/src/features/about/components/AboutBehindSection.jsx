@@ -1,129 +1,142 @@
 'use client';
 
-import { Quote, ExternalLink } from 'lucide-react';
+import Link from 'next/link';
+import { CheckCircle2, Quote, ExternalLink, ArrowRight } from 'lucide-react';
+import { FacebookIcon } from '@/components/common/Icons';
 
 export default function AboutBehindSection({ content, isHi }) {
-  return (
-    <section id="behind" className="bg-white py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-        {/* Founder Portrait Card */}
-        <div className="flex justify-center lg:justify-start">
-          <div className="w-full max-w-sm rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-lg">
-            <div className="relative h-[420px] w-full overflow-hidden">
-              <img
-                src="/images/sukhvinder-pajji.jpg"
-                alt={content.behind_name}
-                className="w-full h-full object-cover object-top"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-transparent" />
-            </div>
+  const checkPoints = isHi
+    ? [
+        'विस्तृत प्रॉपर्टी परामर्श सहायता',
+        'स्थानीय क्षेत्र का ज्ञान',
+        'विश्वसनीय और पारदर्शी जानकारी',
+        'एक पीपल-फर्स्ट दृष्टिकोण',
+      ]
+    : [
+        'Wide Property Consultation Support',
+        'Local Area Knowledge',
+        'Reliable and Transparent Information',
+        'A People-Focused Approach',
+      ];
 
-            {/* Bottom Badge */}
-            <div className="p-5 text-center bg-white border-t border-slate-100">
-              <h3 className="font-black text-dpxNavy text-xl tracking-tight mb-1">{content.behind_name}</h3>
-              <p className="text-dpxTeal text-xs font-bold uppercase tracking-wider">
-                {isHi ? 'चंदर विहार प्रॉपर्टी एक्सचेंज के पीछे की सोच' : 'Founder & Community Lead'}
+  return (
+    <section id="behind" className="bg-white py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 border-t border-slate-100">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+        {/* Founder Portrait (Balanced height & 24px rounded corners) */}
+        <div className="lg:col-span-5 flex justify-center lg:justify-start">
+          <div className="relative w-full max-w-[420px] h-[460px] sm:h-[500px] lg:h-[520px] rounded-[24px] overflow-hidden shadow-xl border border-slate-200/80 bg-slate-100 group">
+            <img
+              src="/images/sukhvinder-pajji.jpg"
+              alt={content.behind_name}
+              className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/85 via-[#0F172A]/20 to-transparent pointer-events-none" />
+            <div className="absolute bottom-6 left-6 right-6 text-white z-10">
+              <h3 className="font-extrabold text-xl sm:text-2xl leading-tight mb-0.5">{content.behind_name}</h3>
+              <p className="text-[#FF9900] text-xs font-bold uppercase tracking-wider">
+                {isHi ? 'संस्थापक व कम्युनिटी लीडर' : 'Founder & Community Lead'}
               </p>
             </div>
           </div>
         </div>
 
-        {/* Section Text Content */}
-        <div>
-          <span className="inline-block bg-dpxTealLight text-dpxTeal text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider mb-4">
-            {content.behind_eyebrow}
-          </span>
-          <h2 className="text-3xl md:text-4xl font-black text-dpxNavy leading-tight mb-3 tracking-tight">
+        {/* Section Text Content (Balanced vertical rhythm & premium typography) */}
+        <div className="lg:col-span-7">
+          <p className="text-[#00A3AD] text-xs font-black uppercase tracking-widest mb-3">
+            ✦ {content.behind_eyebrow} ✦
+          </p>
+
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] leading-tight mb-2 tracking-tight">
             {content.behind_title}
           </h2>
-          <p className="text-dpxOrange font-bold text-sm mb-6">{content.behind_subtitle}</p>
-          <p className="text-slate-600 text-base leading-relaxed mb-6 font-normal">{content.behind_body}</p>
+          
+          <p className="text-[#FF9900] font-bold text-sm sm:text-base mb-5 leading-snug">
+            {content.behind_subtitle}
+          </p>
 
-          <p className="text-dpxNavy font-black text-sm mb-3 uppercase tracking-wider">{content.behind_idea}</p>
-          <ul className="space-y-3 mb-8">
-            {content.behind_points.map((pt) => (
-              <li key={pt} className="flex items-center gap-3 text-slate-800 font-semibold text-sm">
-                <span className="w-2.5 h-2.5 rounded-full bg-dpxTeal shrink-0" />
-                {pt}
-              </li>
-            ))}
-          </ul>
+          <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-6 font-normal">
+            {content.behind_body}
+          </p>
 
-          <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 mb-6">
-            <Quote className="w-6 h-6 text-dpxTeal mb-2 opacity-80" />
-            <p className="text-dpxNavy font-bold text-base leading-snug italic mb-2">{content.behind_quote}</p>
-          </div>
-
-          <p className="text-slate-600 text-sm leading-relaxed mb-6 font-normal">{content.behind_belief}</p>
-
-          <div className="border-l-4 border-dpxOrange pl-5 bg-amber-50/50 py-3 pr-4 rounded-r-xl">
-            <p className="text-dpxOrange text-[10px] font-black uppercase tracking-widest mb-1">
-              {content.behind_message_label}
-            </p>
-            <p className="text-slate-700 text-sm leading-relaxed italic">{content.behind_message}</p>
-            <p className="text-dpxOrange font-black text-sm mt-2.5">— {content.behind_name}</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Ground-Level Civic & Social Initiatives Grid Cards */}
-      {content.behind_initiatives && (
-        <div className="max-w-7xl mx-auto mt-16 pt-8">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="inline-block bg-amber-100 text-dpxOrange text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider mb-3">
-              {isHi ? 'ज़मीनी पहल व समाज सेवा' : 'Ground-Level Impact'}
-            </span>
-            <h3 className="text-2xl sm:text-3xl font-black text-dpxNavy tracking-tight mb-3">
-              {content.behind_initiatives_title}
-            </h3>
-            {content.behind_initiatives_subtitle && (
-              <p className="text-slate-600 text-sm font-medium">{content.behind_initiatives_subtitle}</p>
-            )}
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {content.behind_initiatives.map((item) => (
-              <div
-                key={item.title}
-                className="bg-slate-50/80 hover:bg-white border border-slate-200/90 hover:border-dpxTeal/40 hover:shadow-md rounded-xl p-6 transition-all flex flex-col justify-between"
-              >
-                <div>
-                  <div className="mb-3">
-                    <span className="text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-md bg-dpxTealLight text-dpxTeal border border-dpxTeal/20">
-                      {item.category}
-                    </span>
-                  </div>
-                  <h4 className="font-black text-dpxNavy text-base mb-2 leading-snug">
-                    {item.title}
-                  </h4>
-                  <p className="text-slate-600 text-xs leading-relaxed font-normal">{item.desc}</p>
-                </div>
+          {/* Clean 2-column benefits list */}
+          <div className="grid sm:grid-cols-2 gap-y-3.5 gap-x-6 my-6 pt-1 pb-1">
+            {checkPoints.map((pt) => (
+              <div key={pt} className="flex items-center gap-2.5 text-slate-800 font-bold text-sm sm:text-base">
+                <CheckCircle2 className="w-4.5 h-4.5 text-[#00A3AD] shrink-0" />
+                <span>{pt}</span>
               </div>
             ))}
           </div>
-        </div>
-      )}
 
-      {/* Official Facebook Community Link Card */}
-      {content.behind_facebook_url && (
-        <div className="max-w-4xl mx-auto mt-16 bg-slate-50/80 border border-slate-200/90 rounded-2xl p-8 sm:p-10 text-center shadow-xs">
-          <h4 className="text-xl sm:text-2xl font-black text-dpxNavy mb-3 tracking-tight">
-            {content.behind_facebook_heading}
-          </h4>
-          <p className="text-slate-600 text-sm max-w-2xl mx-auto leading-relaxed mb-6 font-normal">
-            {content.behind_facebook_desc}
-          </p>
-          <a
-            href={content.behind_facebook_url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2.5 bg-dpxTeal hover:bg-[#008f98] text-white font-black text-sm px-8 py-3.5 rounded-full shadow-md transition-all hover:scale-105 active:scale-95"
-          >
-            <span>{content.behind_facebook_cta}</span>
-            <ExternalLink className="w-4 h-4" />
-          </a>
+          {/* Editorial Quote with left teal accent line */}
+          {content.behind_quote && (
+            <blockquote className="border-l-3 border-[#00A3AD] pl-4 sm:pl-5 py-0.5 my-7">
+              <p className="text-[#0F172A] font-extrabold text-base sm:text-lg italic leading-relaxed">
+                {content.behind_quote}
+              </p>
+            </blockquote>
+          )}
+
+          {/* Personal Message with clean top divider line */}
+          {content.behind_message && (
+            <div className="pt-6 border-t border-slate-100 mt-7">
+              <p className="text-[#FF9900] text-xs font-black uppercase tracking-widest mb-2">
+                {content.behind_message_label}
+              </p>
+              <p className="text-slate-600 text-sm sm:text-base leading-relaxed italic font-normal">
+                {content.behind_message}
+              </p>
+              <p className="text-[#0F172A] font-bold text-sm sm:text-base mt-3">
+                — {content.behind_name}, <span className="text-[#00A3AD] font-semibold">{isHi ? 'चंदर विहार' : 'Chander Vihar'}</span>
+              </p>
+            </div>
+          )}
         </div>
-      )}
+      </div>
+
+      {/* Banners */}
+      <div className="max-w-5xl mx-auto mt-16 space-y-6">
+        {/* Banner 1: Chander Vihar Guide */}
+        <div className="p-6 sm:p-8 rounded-[24px] bg-slate-50 border border-slate-200 text-center">
+          <h4 className="text-lg sm:text-xl font-extrabold text-[#0F172A] mb-2 tracking-tight">
+            {isHi ? 'चंदर विहार एरिया गाइड एवं प्रशासनिक विवरण' : 'Chander Vihar Area & Civic Initiatives Guide'}
+          </h4>
+          <p className="text-slate-600 text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed mb-5 font-normal">
+            {isHi
+              ? 'क्षेत्र की प्रशासनिक जानकारी, नागरिक सेवाएं, प्रवेश द्वार एवं ज़मीनी कार्य जानने के लिए पढ़ें।'
+              : 'Explore civic info, property services, local updates, and resources for a stronger Chander Vihar community.'}
+          </p>
+          <Link
+            href="/chander-vihar-initiatives"
+            className="inline-flex items-center gap-2 bg-[#0F172A] hover:bg-slate-800 text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-full shadow-md transition-all"
+          >
+            <span>{isHi ? 'पूरा एरिया गाइड देखें' : 'View Full Chander Vihar Guide'}</span>
+            <ArrowRight className="w-4 h-4 text-[#FF9900]" />
+          </Link>
+        </div>
+
+        {/* Banner 2: Facebook Community */}
+        {content.behind_facebook_url && (
+          <div className="p-6 sm:p-8 rounded-[24px] bg-cyan-50/50 border border-cyan-100 text-center">
+            <h4 className="text-lg sm:text-xl font-extrabold text-[#0F172A] mb-2 tracking-tight">
+              {content.behind_facebook_heading}
+            </h4>
+            <p className="text-slate-600 text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed mb-5 font-normal">
+              {content.behind_facebook_desc}
+            </p>
+            <a
+              href={content.behind_facebook_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2.5 bg-[#00A3AD] hover:bg-[#008A93] text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-full shadow-md transition-all"
+            >
+              <FacebookIcon className="w-4 h-4 fill-current text-white" />
+              <span>{content.behind_facebook_cta}</span>
+              <ExternalLink className="w-4 h-4" />
+            </a>
+          </div>
+        )}
+      </div>
     </section>
   );
 }

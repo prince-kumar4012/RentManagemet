@@ -1,157 +1,85 @@
 'use client';
 
-import { Phone, MessageCircle, MapPin, ChevronRight, CheckCircle2 } from 'lucide-react';
+import { MapPin, ArrowRight } from 'lucide-react';
+import { WhatsAppIcon, PhoneIcon } from '@/components/common/Icons';
 import { SITE_CONFIG } from '@/config/site.config';
 
 export default function HeroSection({ content, isHi, onOpenInquiry }) {
   return (
-    <div>
-      {/* ── MAIN HERO ── */}
-      <section className="relative overflow-hidden">
-        <div className="flex flex-col lg:flex-row min-h-[88vh] lg:min-h-[90vh]">
+    <section className="relative bg-slate-100 overflow-hidden">
+      {/* Full-width Panoramic Hero Banner Image */}
+      <div className="relative w-full min-h-[460px] sm:min-h-[500px] lg:min-h-[540px] flex items-center">
+        
+        {/* Background Hero Banner */}
+        <img
+          src="/images/banners/heroBanner.jpg"
+          alt="Connecting People. Building Trust. — Chander Vihar"
+          className="absolute inset-0 w-full h-full object-cover object-center lg:object-right-top"
+        />
 
-          {/* ── LEFT: White content panel ── */}
-          <div className="relative flex items-center bg-white px-6 sm:px-10 lg:px-14 xl:px-20 py-12 lg:py-0 z-10 lg:w-[48%] xl:w-[44%] shrink-0">
-            {/* Soft right-edge fade into image */}
-            <div className="hidden lg:block absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white via-white/70 to-transparent z-20 pointer-events-none" />
+        {/* Left-to-right white gradient mask for crystal clear text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 sm:via-white/90 to-transparent lg:w-[65%] pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/85 to-transparent sm:hidden pointer-events-none" />
 
-            <div className="max-w-lg w-full">
-              {/* Location badge */}
-              <div className="inline-flex items-center gap-1.5 mb-6">
-                <MapPin className="w-3.5 h-3.5 text-dpxTeal" />
-                <span className="text-dpxTeal text-[11px] font-black uppercase tracking-[0.18em]">
-                  Chander Vihar • Delhi
-                </span>
-              </div>
-
-              {/* H1 */}
-              <h1 className={`font-black text-dpxNavy leading-[1.05] tracking-tight mb-4 ${
-                isHi
-                  ? 'text-3xl sm:text-4xl lg:text-[44px]'
-                  : 'text-4xl sm:text-5xl lg:text-[52px]'
-              }`}>
-                {content.h1_line1}
-                <br />
-                <span className="text-dpxTeal">{content.h1_line2}</span>
-              </h1>
-
-              {/* Tagline */}
-              <p className="text-dpxOrange font-bold text-base sm:text-lg mb-5 leading-snug">
-                {content.tagline}
-              </p>
-
-              {/* Body */}
-              <p className="text-slate-500 text-sm sm:text-base leading-relaxed mb-8 font-normal max-w-md">
-                {content.hero_body}
-              </p>
-
-              {/* CTA Buttons */}
-              <div className="flex flex-wrap gap-3 mb-7">
-                <a
-                  href={`tel:${SITE_CONFIG.rawPhone}`}
-                  className="inline-flex items-center gap-2 bg-dpxNavy/8 backdrop-blur-sm border border-dpxNavy/25 text-dpxNavy hover:bg-dpxNavy hover:text-white px-6 py-3.5 rounded-xl font-black text-sm transition-all duration-200 shadow-sm hover:shadow-md"
-                >
-                  <Phone className="w-4 h-4" />
-                  {isHi ? 'Call Karo' : 'Talk to Us'}
-                  <ChevronRight className="w-4 h-4" />
-                </a>
-                <a
-                  href={`https://wa.me/${SITE_CONFIG.rawWhatsapp}?text=Namaste%20Gullu%20ji%2C%20main%20Chander%20Vihar%20se%20connect%20karna%20chahta%20hoon`}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 bg-emerald-500/12 backdrop-blur-sm border border-emerald-500/30 text-emerald-700 hover:bg-emerald-500 hover:border-emerald-500 hover:text-white px-6 py-3.5 rounded-xl font-black text-sm transition-all duration-200 shadow-sm hover:shadow-md"
-                >
-                  <MessageCircle className="w-4 h-4" />
-                  {isHi ? 'WhatsApp Karo' : 'WhatsApp Us'}
-                </a>
-              </div>
-
-              {/* Support note */}
-              <p className="text-slate-400 text-xs font-medium italic border-l-2 border-dpxTeal/40 pl-3 leading-relaxed">
-                {content.hero_support}
-              </p>
-            </div>
-          </div>
-
-          {/* ── RIGHT: banner2 full image panel ── */}
-          <div className="relative flex-1 min-h-[60vw] sm:min-h-[420px] lg:min-h-0 overflow-hidden">
-            {/* banner2.jpg — Delhi city + Metro + Pajji */}
-            <img
-              src="/images/banners/banner2.jpg"
-              alt="Chander Vihar — A Stronger Community"
-              className="absolute inset-0 w-full h-full object-cover object-right-top"
-            />
-
-            {/* Blend gradient on left edge (joins white panel) */}
-            <div className="absolute inset-0 bg-gradient-to-r from-white/55 via-white/10 to-transparent pointer-events-none" />
-
-            {/* Cursive tagline overlay — top-left of image panel */}
-            <div className="absolute top-8 left-10 sm:left-14 z-10">
-              <p
-                className="text-white leading-snug drop-shadow-[0_2px_12px_rgba(0,0,0,0.55)]"
-                style={{
-                  fontFamily: "'Georgia','Times New Roman',serif",
-                  fontStyle: 'italic',
-                  fontWeight: 600,
-                  fontSize: 'clamp(1.1rem, 2.2vw, 1.75rem)',
-                }}
-              >
-                A Stronger<br />
-                Chander Vihar<br />
-                Together
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      {/* ── 3 QUICK-ACCESS CARDS ── */}
-      <section className="bg-white border-b border-slate-100 py-10 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-center text-xs font-black text-slate-400 uppercase tracking-widest mb-6">
-            {content.quick_label}
+        {/* Top Right Script Text (Positioned next to Pajji's head) */}
+        <div className="hidden lg:block absolute top-8 right-[22%] lg:right-[26%] xl:right-[28%] z-10 text-left pointer-events-none select-none">
+          <p className="font-serif italic text-2xl lg:text-3xl text-slate-800 font-bold leading-tight tracking-wide drop-shadow-2xs opacity-90 whitespace-pre-line">
+            {isHi ? 'एक सशक्त\nचंदर विहार\nएक साथ' : 'A Stronger\nChander Vihar\nTogether'}
           </p>
-          <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-5">
-            {content.quick_cards.map((card) => {
-              const Icon = card.icon;
-              return (
-                <button
-                  key={card.title}
-                  onClick={() => onOpenInquiry && onOpenInquiry(card.title)}
-                  className="group text-left bg-slate-50 hover:bg-white border border-slate-200 hover:border-dpxTeal/50 rounded-2xl p-5 transition-all duration-300 hover:shadow-md"
-                >
-                  <div className="flex items-start gap-3 mb-4">
-                    <div
-                      className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 backdrop-blur-sm"
-                      style={{ background: card.bg, border: `1px solid ${card.color}30` }}
-                    >
-                      <Icon className="w-5 h-5" style={{ color: card.color }} />
-                    </div>
-                    <div>
-                      <p className="font-black text-dpxNavy text-sm leading-tight">{card.title}</p>
-                      <p className="text-xs font-semibold mt-0.5" style={{ color: card.color }}>{card.titleHi}</p>
-                    </div>
-                  </div>
-                  <p className="text-slate-500 text-xs leading-relaxed mb-4">{card.desc}</p>
-                  <ul className="space-y-1 mb-4">
-                    {card.items.map((item) => (
-                      <li key={item} className="flex items-center gap-2 text-xs text-slate-600 font-medium">
-                        <CheckCircle2 className="w-3.5 h-3.5 shrink-0" style={{ color: card.color }} />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="flex items-center justify-between pt-3 border-t border-slate-100">
-                    <span className="text-xs font-black" style={{ color: card.color }}>{card.cta}</span>
-                    <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" style={{ color: card.color }} />
-                  </div>
-                </button>
-              );
-            })}
+        </div>
+
+        {/* Left Content Panel */}
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
+          <div className="max-w-xl text-slate-900">
+            
+            {/* Location Badge */}
+            <div className="inline-flex items-center gap-1.5 bg-[#EBF7FC] border border-[#BAE6FD] text-[#0284C7] font-bold text-xs px-4 py-1.5 rounded-full mb-6 shadow-2xs">
+              <MapPin className="w-3.5 h-3.5 text-[#00A3AD] fill-current" />
+              <span>{content.hero_location || (isHi ? 'चंदर विहार • दिल्ली' : 'CHANDER VIHAR • DELHI')}</span>
+            </div>
+
+            {/* H1 Heading */}
+            <h1 className="font-extrabold text-4xl sm:text-5xl lg:text-[56px] leading-[1.08] tracking-tight mb-3">
+              <span className="text-[#0F172A] block">{content.h1_line1}</span>
+              <span className="text-[#00A3AD] block">{content.h1_line2}</span>
+            </h1>
+
+            {/* Orange Subtitle Highlight */}
+            <p className="text-[#FF9900] font-bold text-lg sm:text-xl mb-5 leading-snug">
+              {content.tagline}
+            </p>
+
+            {/* Body Description */}
+            <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-8 font-normal max-w-lg">
+              {content.hero_body}
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+              <a
+                href={`tel:${SITE_CONFIG.rawPhone}`}
+                className="inline-flex items-center justify-center gap-2.5 bg-[#0F172A] hover:bg-[#1E293B] text-white px-7 py-3.5 rounded-full font-bold text-sm sm:text-base transition-all shadow-md hover:shadow-lg"
+              >
+                <PhoneIcon className="w-4 h-4 fill-current shrink-0" />
+                <span>{content.cta1}</span>
+                <ArrowRight className="w-4 h-4 shrink-0 ml-0.5" />
+              </a>
+
+              <a
+                href={`https://wa.me/${SITE_CONFIG.rawWhatsapp}?text=Hi%2C%20I%20want%20to%20connect%20regarding%20a%20property%20in%20Chander%20Vihar`}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20bd5a] text-white px-7 py-3.5 rounded-full font-bold text-sm sm:text-base transition-all shadow-md hover:shadow-lg"
+              >
+                <WhatsAppIcon className="w-5 h-5 fill-current shrink-0" />
+                <span>{content.cta2}</span>
+              </a>
+            </div>
+
           </div>
         </div>
-      </section>
-    </div>
+
+      </div>
+    </section>
   );
 }

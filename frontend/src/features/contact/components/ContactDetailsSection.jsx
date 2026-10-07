@@ -1,33 +1,32 @@
 'use client';
 
+import { ArrowRight } from 'lucide-react';
 import {
-  Phone, MessageCircle, Mail, MapPin,
-  Instagram, Facebook, Youtube, ArrowRight,
-} from 'lucide-react';
+  PhoneIcon, WhatsAppIcon, EmailIcon, InstagramIcon, FacebookIcon, YouTubeIcon
+} from '@/components/common/Icons';
 import { SITE_CONFIG } from '@/config/site.config';
 
 export default function ContactDetailsSection({ content, isHi }) {
   return (
-    <section className="bg-white py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16">
+    <section className="bg-white py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 border-b border-slate-100">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16">
         <div>
-          <div className="border-l-4 border-dpxTeal pl-4 mb-8">
-            <p className="text-dpxTeal font-black text-xs tracking-widest uppercase">
-              {content.reach_label}
-            </p>
-          </div>
-          <div className="space-y-5 mb-10">
+          <p className="text-[#00A3AD] text-xs font-black uppercase tracking-widest mb-3">
+            {content.reach_label}
+          </p>
+
+          <div className="space-y-4 mb-10">
             {content.contacts.map((item) => {
               const Icon = item.icon;
               return (
-                <div key={item.label} className="flex items-start gap-5 bg-slate-50/80 rounded-2xl p-5 border border-slate-200/80 hover:shadow-md transition-all">
+                <div key={item.label} className="flex items-start gap-4 p-5 rounded-[24px] bg-slate-50/70 border border-slate-200/80 shadow-2xs hover:shadow-md transition-all">
                   <div
-                    className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 bg-dpxTealLight text-dpxTeal"
+                    className="w-11 h-11 rounded-2xl flex items-center justify-center shrink-0 bg-cyan-100/90 text-[#00A3AD] border border-cyan-200/60 shadow-2xs mt-0.5"
                   >
-                    <Icon className="w-6 h-6" />
+                    <Icon className="w-5.5 h-5.5 fill-current" />
                   </div>
-                  <div>
-                    <p className="text-xs font-black text-slate-400 uppercase tracking-widest mb-1">
+                  <div className="overflow-hidden">
+                    <p className="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-0.5">
                       {item.label}
                     </p>
                     {item.href ? (
@@ -35,128 +34,126 @@ export default function ContactDetailsSection({ content, isHi }) {
                         href={item.href}
                         target={item.href.startsWith('http') ? '_blank' : undefined}
                         rel={item.href.startsWith('http') ? 'noreferrer' : undefined}
-                        className="text-dpxNavy font-black text-lg hover:text-dpxTeal transition block"
+                        className="text-[#0F172A] font-extrabold text-base sm:text-lg hover:text-[#00A3AD] transition block truncate"
                       >
                         {item.value}
                       </a>
                     ) : (
-                      <p className="text-dpxNavy font-black text-lg">{item.value}</p>
+                      <p className="text-[#0F172A] font-extrabold text-base sm:text-lg truncate">{item.value}</p>
                     )}
-                    <p className="text-slate-400 text-xs mt-1 font-normal">{item.sub}</p>
+                    <p className="text-slate-500 text-xs mt-0.5 font-normal">{item.sub}</p>
                   </div>
                 </div>
               );
             })}
           </div>
 
-          <div className="bg-slate-50/80 border border-slate-200/80 rounded-2xl p-8 text-dpxNavy shadow-xs">
-            <h3 className="text-xl font-black mb-5">{content.start_title}</h3>
-            <div className="space-y-4 mb-5">
+          <div className="pt-6 border-t border-slate-100 text-[#0F172A]">
+            <h3 className="text-xl font-extrabold mb-5 tracking-tight">{content.start_title}</h3>
+            <div className="space-y-3.5 mb-5">
               {content.start_steps.map((step, i) => (
-                <div key={i} className="flex items-start gap-4">
-                  <div className="w-7 h-7 rounded-full bg-dpxTealLight text-dpxTeal font-black text-xs flex items-center justify-center shrink-0">
-                    {i + 1}
+                <div key={i} className="flex items-start gap-3.5 p-3 rounded-2xl bg-slate-50 border border-slate-100">
+                  <div className="w-7 h-7 rounded-xl bg-[#00A3AD] text-white font-extrabold text-xs flex items-center justify-center shrink-0 shadow-2xs">
+                    0{i + 1}
                   </div>
-                  <span className="text-slate-600 text-sm leading-snug font-normal">{step}</span>
+                  <span className="text-slate-700 text-sm leading-snug font-semibold mt-0.5">{step}</span>
                 </div>
               ))}
             </div>
-            <p className="text-slate-500 text-xs italic pt-4 border-t border-slate-200 font-normal">
+            <p className="text-slate-500 text-xs italic pt-2 font-normal">
               {content.start_note}
             </p>
           </div>
         </div>
 
         <div>
-          <div className="border-l-4 border-dpxTeal pl-4 mb-8">
-            <p className="text-dpxTeal font-black text-xs tracking-widest uppercase">
-              {isHi ? 'अभी शुरू करें' : 'Start Right Now'}
-            </p>
-          </div>
+          <p className="text-[#00A3AD] text-xs font-black uppercase tracking-widest mb-3">
+            {isHi ? 'अभी शुरू करें' : 'Start Right Now'}
+          </p>
 
           <div className="space-y-4 mb-10">
             <a
               href={`tel:${SITE_CONFIG.rawPhone}`}
-              className="flex items-center gap-4 bg-dpxOrange hover:bg-dpxOrangeDark text-white rounded-2xl px-7 py-5 font-black text-lg transition shadow-lg shadow-orange-500/20 hover:-translate-y-0.5"
+              className="flex items-center gap-4 bg-[#0F172A] hover:bg-[#1E293B] text-white rounded-full px-7 py-4 font-extrabold text-base sm:text-lg transition-all shadow-md hover:shadow-lg text-left"
             >
-              <Phone className="w-7 h-7 shrink-0" />
+              <PhoneIcon className="w-6 h-6 shrink-0 fill-current text-white" />
               <div>
                 <p>{content.cta_call}</p>
-                <p className="text-white/70 text-sm font-bold">{SITE_CONFIG.rawPhone}</p>
+                <p className="text-slate-300 text-xs sm:text-sm font-semibold">{SITE_CONFIG.rawPhone}</p>
               </div>
             </a>
             <a
               href={`https://wa.me/${SITE_CONFIG.rawWhatsapp}?text=Hi%2C%20I%20want%20to%20connect%20regarding%20a%20property%20in%20Chander%20Vihar`}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-4 bg-emerald-500 hover:bg-emerald-600 text-white rounded-2xl px-7 py-5 font-black text-lg transition shadow-lg shadow-emerald-500/20 hover:-translate-y-0.5"
+              className="flex items-center gap-4 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-full px-7 py-4 font-extrabold text-base sm:text-lg transition-all shadow-md hover:shadow-lg text-left"
             >
-              <MessageCircle className="w-7 h-7 shrink-0" />
+              <WhatsAppIcon className="w-6 h-6 shrink-0 fill-current text-white" />
               <div>
                 <p>{content.cta_whatsapp}</p>
-                <p className="text-white/70 text-sm font-bold">{SITE_CONFIG.rawWhatsapp}</p>
+                <p className="text-white/90 text-xs sm:text-sm font-semibold">{SITE_CONFIG.rawWhatsapp}</p>
               </div>
             </a>
             <a
               href={`mailto:${SITE_CONFIG.email}`}
-              className="flex items-center gap-4 bg-dpxTeal hover:bg-dpxTealDark text-white rounded-2xl px-7 py-5 font-black text-lg transition shadow-lg shadow-teal-500/20 hover:-translate-y-0.5"
+              className="flex items-center gap-4 bg-[#00A3AD] hover:bg-[#008A93] text-white rounded-full px-7 py-4 font-extrabold text-base sm:text-lg transition-all shadow-md hover:shadow-lg text-left"
             >
-              <Mail className="w-7 h-7 shrink-0" />
+              <EmailIcon className="w-6 h-6 shrink-0 fill-current text-white" />
               <div>
                 <p>{content.cta_email}</p>
-                <p className="text-white/70 text-sm font-bold">{SITE_CONFIG.email}</p>
+                <p className="text-cyan-100 text-xs sm:text-sm font-semibold">{SITE_CONFIG.email}</p>
               </div>
             </a>
           </div>
 
-          <div className="bg-slate-50/80 rounded-2xl p-7 border border-slate-200/80">
-            <p className="font-black text-dpxNavy mb-1">{content.social_title}</p>
-            <p className="text-slate-500 text-sm mb-6 font-normal">{content.social_body}</p>
+          <div className="pt-4 border-t border-slate-100">
+            <p className="font-extrabold text-[#0F172A] text-lg mb-1 tracking-tight">{content.social_title}</p>
+            <p className="text-slate-500 text-xs sm:text-sm mb-6 font-normal">{content.social_body}</p>
             <div className="space-y-3">
               <a
                 href={SITE_CONFIG.socials.instagram.url}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-4 bg-white rounded-xl border border-slate-200 p-4 hover:border-dpxTeal hover:shadow-md transition"
+                className="flex items-center gap-4 bg-slate-50/80 rounded-[20px] p-4 border border-slate-200/80 hover:border-pink-300 hover:shadow-md transition duration-300"
               >
-                <div className="w-10 h-10 rounded-xl bg-pink-500 flex items-center justify-center shrink-0 text-white">
-                  <Instagram className="w-5 h-5" />
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 via-pink-600 to-purple-600 flex items-center justify-center shrink-0 text-white shadow-2xs">
+                  <InstagramIcon className="w-5 h-5 fill-current text-white" />
                 </div>
                 <div>
-                  <p className="font-black text-dpxNavy text-sm">{SITE_CONFIG.socials.instagram.handle}</p>
+                  <p className="font-extrabold text-[#0F172A] text-sm">{SITE_CONFIG.socials.instagram.handle}</p>
                   <p className="text-slate-400 text-xs font-normal">Instagram</p>
                 </div>
-                <ArrowRight className="w-4 h-4 text-slate-300 ml-auto" />
+                <ArrowRight className="w-4 h-4 text-slate-400 ml-auto" />
               </a>
               <a
                 href={SITE_CONFIG.socials.facebook.url}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-4 bg-white rounded-xl border border-slate-200 p-4 hover:border-dpxTeal hover:shadow-md transition"
+                className="flex items-center gap-4 bg-slate-50/80 rounded-[20px] p-4 border border-slate-200/80 hover:border-blue-300 hover:shadow-md transition duration-300"
               >
-                <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center shrink-0 text-white">
-                  <Facebook className="w-5 h-5" />
+                <div className="w-10 h-10 rounded-xl bg-[#1877F2] flex items-center justify-center shrink-0 text-white shadow-2xs">
+                  <FacebookIcon className="w-5 h-5 fill-current text-white" />
                 </div>
                 <div>
-                  <p className="font-black text-dpxNavy text-sm">{SITE_CONFIG.socials.facebook.handle}</p>
-                  <p className="text-slate-400 text-xs font-normal">Facebook</p>
+                  <p className="font-extrabold text-[#0F172A] text-sm">{SITE_CONFIG.socials.facebook.handle}</p>
+                  <p className="text-slate-400 text-xs font-normal">Facebook Page</p>
                 </div>
-                <ArrowRight className="w-4 h-4 text-slate-300 ml-auto" />
+                <ArrowRight className="w-4 h-4 text-slate-400 ml-auto" />
               </a>
               <a
                 href={SITE_CONFIG.socials.youtube.url}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-4 bg-white rounded-xl border border-slate-200 p-4 hover:border-dpxTeal hover:shadow-md transition"
+                className="flex items-center gap-4 bg-slate-50/80 rounded-[20px] p-4 border border-slate-200/80 hover:border-red-300 hover:shadow-md transition duration-300"
               >
-                <div className="w-10 h-10 rounded-xl bg-red-600 flex items-center justify-center shrink-0 text-white">
-                  <Youtube className="w-5 h-5" />
+                <div className="w-10 h-10 rounded-xl bg-red-600 flex items-center justify-center shrink-0 text-white shadow-2xs">
+                  <YouTubeIcon className="w-5 h-5 fill-current text-white" />
                 </div>
                 <div>
-                  <p className="font-black text-dpxNavy text-sm">{SITE_CONFIG.socials.youtube.handle}</p>
-                  <p className="text-slate-400 text-xs font-normal">YouTube</p>
+                  <p className="font-extrabold text-[#0F172A] text-sm">{SITE_CONFIG.socials.youtube.handle}</p>
+                  <p className="text-slate-400 text-xs font-normal">YouTube Channel</p>
                 </div>
-                <ArrowRight className="w-4 h-4 text-slate-300 ml-auto" />
+                <ArrowRight className="w-4 h-4 text-slate-400 ml-auto" />
               </a>
             </div>
           </div>

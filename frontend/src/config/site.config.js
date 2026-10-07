@@ -1,9 +1,9 @@
 export const SITE_CONFIG = {
   name: 'Chander Vihar Property Exchange',
   shortName: 'CVP Exchange',
-  tagline: 'Chander Vihar ka Vikas, Ekta aur Bharosa',
+  tagline: 'Chander Vihar Community, Growth & Trust',
   taglineHi: 'चंदर विहार का विकास, एकता और भरोसा',
-  description: "Chander Vihar & Nilothi — Apna Local Network, Apni Community. Sukhwinder Singh Gullu ke sath property, sarkari yojanayein, aur community development ka ek vishwasniya network.",
+  description: "Chander Vihar & Nilothi — Your trusted local property and community network guided by Sukhwinder Singh Gullu.",
   phone: '+91 9899063456',
   rawPhone: '9899063456',
   whatsapp: '+91 9999706703',

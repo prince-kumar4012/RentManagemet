@@ -7,11 +7,11 @@ export default function ContactFounderSection({ content, isHi }) {
   if (!content.founder_title) return null;
 
   return (
-    <section className="bg-white py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+    <section className="bg-white py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         {/* Left: Founder Photo Card */}
         <div className="lg:col-span-5 flex justify-center">
-          <div className="w-full max-w-sm rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-lg">
+          <div className="w-full max-w-sm rounded-2xl overflow-hidden bg-white shadow-md">
             <div className="relative h-[400px] sm:h-[420px] w-full overflow-hidden">
               <img
                 src="/images/sukhvinder-pajji.jpg"
@@ -21,7 +21,7 @@ export default function ContactFounderSection({ content, isHi }) {
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-transparent" />
             </div>
 
-            <div className="p-5 text-center bg-white border-t border-slate-100">
+            <div className="p-5 text-center bg-white">
               <h3 className="font-black text-dpxNavy text-xl tracking-tight mb-1">Sukhvinder Pajji</h3>
               <p className="text-dpxTeal text-xs font-bold uppercase tracking-wider">
                 {content.founder_badge || (isHi ? 'संस्थापक व कम्युनिटी लीडर' : 'Founder & Community Lead')}
@@ -32,9 +32,9 @@ export default function ContactFounderSection({ content, isHi }) {
 
         {/* Right: Text Narrative */}
         <div className="lg:col-span-7">
-          <span className="inline-block bg-dpxTealLight text-dpxTeal text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider mb-4">
+          <p className="text-[#00A3AD] text-xs font-black uppercase tracking-widest mb-3">
             {content.founder_eyebrow}
-          </span>
+          </p>
           <h2 className="text-3xl sm:text-4xl font-black text-dpxNavy leading-tight mb-3 tracking-tight">
             {content.founder_title}
           </h2>
@@ -50,7 +50,7 @@ export default function ContactFounderSection({ content, isHi }) {
           <div className="flex flex-wrap items-center gap-4">
             <Link
               href="/chander-vihar-initiatives"
-              className="inline-flex items-center gap-2 bg-dpxNavy hover:bg-slate-800 text-white font-black px-6 py-3.5 rounded-xl text-sm transition shadow-md"
+              className="inline-flex items-center gap-2 bg-dpxNavy hover:bg-slate-800 text-white font-bold px-6 py-3.5 rounded-xl text-sm transition shadow-sm"
             >
               <span>{content.founder_cta}</span>
               <ArrowRight className="w-4 h-4 text-dpxTeal" />
@@ -60,7 +60,7 @@ export default function ContactFounderSection({ content, isHi }) {
                 href={content.founder_fb_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-dpxNavy font-bold px-6 py-3.5 rounded-xl text-sm transition border border-slate-200"
+                className="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-dpxNavy font-bold px-6 py-3.5 rounded-xl text-sm transition"
               >
                 <span>{content.founder_fb_cta}</span>
                 <ExternalLink className="w-4 h-4 text-slate-500" />

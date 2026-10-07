@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { X, CheckCircle2, MessageCircle, Building2 } from 'lucide-react';
+import { X, CheckCircle2, Building2 } from 'lucide-react';
+import { WhatsAppIcon } from '@/components/common/Icons';
 import { SITE_CONFIG } from '@/config/site.config';
 
 export default function InquiryModal({ isOpen, onClose, initialService = 'Rent' }) {
@@ -36,51 +37,51 @@ export default function InquiryModal({ isOpen, onClose, initialService = 'Rent' 
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-sm animate-in fade-in duration-200">
-      <div className="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl overflow-hidden border border-slate-100">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs">
+      <div className="relative w-full max-w-lg bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-200">
         
         {/* Header */}
-        <div className="bg-gradient-to-r from-dpxNavy to-slate-900 text-white p-6 relative">
+        <div className="bg-dpxNavy text-white p-5 relative">
           <button
             onClick={onClose}
-            className="absolute top-5 right-5 w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-slate-300 hover:text-white transition"
+            className="absolute top-4 right-4 w-7 h-7 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-slate-300 hover:text-white transition-colors"
           >
-            <X className="w-5 h-5" />
+            <X className="w-4 h-4" />
           </button>
           
-          <div className="flex items-center gap-2 text-dpxTeal text-xs font-black uppercase tracking-widest mb-1">
+          <div className="flex items-center gap-1.5 text-dpxTeal text-xs font-bold uppercase tracking-wider mb-1">
             <Building2 className="w-4 h-4" />
             Quick Property Inquiry
           </div>
-          <h3 className="text-xl font-black text-white">Apni Zaroorat Batao</h3>
-          <p className="text-slate-400 text-xs mt-1">
+          <h3 className="text-xl font-bold text-white tracking-tight">Apni Zaroorat Batao</h3>
+          <p className="text-slate-300 text-xs mt-0.5">
             Chander Vihar &amp; Nilothi — Seedha Connect Karo
           </p>
         </div>
 
         {/* Content Body */}
         {submitted ? (
-          <div className="p-8 text-center">
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 text-green-600">
-              <CheckCircle2 className="w-10 h-10" />
+          <div className="p-6 text-center">
+            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3 text-green-600">
+              <CheckCircle2 className="w-8 h-8" />
             </div>
-            <h4 className="text-2xl font-black text-dpxNavy mb-2">Inquiry Submitted!</h4>
-            <p className="text-slate-600 text-sm mb-6">
+            <h4 className="text-xl font-bold text-dpxNavy mb-1.5">Inquiry Submitted!</h4>
+            <p className="text-slate-600 text-sm mb-5">
               Opening WhatsApp to instantly send your details to <strong>{SITE_CONFIG.shortName}</strong>.
             </p>
             <button
               onClick={handleReset}
-              className="btn-dpx-primary w-full py-3.5 rounded-2xl font-black text-sm"
+              className="w-full py-3 rounded-xl bg-dpxNavy text-white font-bold text-sm"
             >
               Done
             </button>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="p-6 space-y-4">
+          <form onSubmit={handleSubmit} className="p-5 space-y-4">
             
             {/* Service Toggle */}
             <div>
-              <label className="block text-xs font-black text-slate-500 uppercase tracking-wider mb-2">
+              <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-2">
                 I want to:
               </label>
               <div className="grid grid-cols-3 gap-2">
@@ -89,10 +90,10 @@ export default function InquiryModal({ isOpen, onClose, initialService = 'Rent' 
                     key={item}
                     type="button"
                     onClick={() => setService(item)}
-                    className={`py-2.5 rounded-xl text-xs font-black transition border ${
+                    className={`py-2 rounded-lg text-xs font-bold border transition-colors ${
                       service === item
-                        ? 'bg-dpxTeal text-white border-dpxTeal shadow-md'
-                        : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
+                        ? 'bg-dpxTeal text-white border-dpxTeal'
+                        : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
                     }`}
                   >
                     {item}
@@ -104,13 +105,13 @@ export default function InquiryModal({ isOpen, onClose, initialService = 'Rent' 
             {/* BHK & Locality Row */}
             <div className="grid grid-cols-2 gap-3">
               <div>
-                <label className="block text-xs font-black text-slate-500 uppercase tracking-wider mb-1">
+                <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1">
                   Locality
                 </label>
                 <select
                   value={locality}
                   onChange={(e) => setLocality(e.target.value)}
-                  className="w-full px-3.5 py-3 rounded-xl border border-slate-200 text-slate-800 text-sm font-semibold focus:outline-none focus:border-dpxTeal bg-slate-50"
+                  className="w-full px-3 py-2.5 rounded-lg border border-slate-200 text-slate-800 text-sm font-semibold focus:outline-none focus:border-dpxTeal bg-slate-50"
                 >
                   <option value="Chander Vihar">Chander Vihar</option>
                   <option value="Nilothi">Nilothi</option>
@@ -124,13 +125,13 @@ export default function InquiryModal({ isOpen, onClose, initialService = 'Rent' 
               </div>
 
               <div>
-                <label className="block text-xs font-black text-slate-500 uppercase tracking-wider mb-1">
+                <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1">
                   Property Size
                 </label>
                 <select
                   value={bhk}
                   onChange={(e) => setBhk(e.target.value)}
-                  className="w-full px-3.5 py-3 rounded-xl border border-slate-200 text-slate-800 text-sm font-semibold focus:outline-none focus:border-dpxTeal bg-slate-50"
+                  className="w-full px-3 py-2.5 rounded-lg border border-slate-200 text-slate-800 text-sm font-semibold focus:outline-none focus:border-dpxTeal bg-slate-50"
                 >
                   <option value="1 BHK">1 BHK</option>
                   <option value="2 BHK">2 BHK</option>
@@ -144,7 +145,7 @@ export default function InquiryModal({ isOpen, onClose, initialService = 'Rent' 
 
             {/* Name */}
             <div>
-              <label className="block text-xs font-black text-slate-500 uppercase tracking-wider mb-1">
+              <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1">
                 Your Full Name *
               </label>
               <input
@@ -153,13 +154,13 @@ export default function InquiryModal({ isOpen, onClose, initialService = 'Rent' 
                 placeholder="e.g. Rahul Sharma"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl border border-slate-200 text-slate-800 text-sm font-medium focus:outline-none focus:border-dpxTeal bg-slate-50"
+                className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 text-slate-800 text-sm font-medium focus:outline-none focus:border-dpxTeal bg-slate-50"
               />
             </div>
 
             {/* Phone Number */}
             <div>
-              <label className="block text-xs font-black text-slate-500 uppercase tracking-wider mb-1">
+              <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1">
                 10-Digit Mobile Number *
               </label>
               <input
@@ -169,7 +170,7 @@ export default function InquiryModal({ isOpen, onClose, initialService = 'Rent' 
                 placeholder={`e.g. ${SITE_CONFIG.rawPhone}`}
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl border border-slate-200 text-slate-800 text-sm font-medium focus:outline-none focus:border-dpxTeal bg-slate-50"
+                className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 text-slate-800 text-sm font-medium focus:outline-none focus:border-dpxTeal bg-slate-50"
               />
             </div>
 
@@ -177,12 +178,12 @@ export default function InquiryModal({ isOpen, onClose, initialService = 'Rent' 
             <div className="pt-2 flex flex-col gap-2">
               <button
                 type="submit"
-                className="w-full py-4 rounded-2xl bg-green-500 hover:bg-green-600 text-white font-black text-sm flex items-center justify-center gap-2 shadow-lg transition"
+                className="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-sm transition-colors"
               >
-                <MessageCircle className="w-5 h-5" />
-                Connect via WhatsApp
+                <WhatsAppIcon className="w-4 h-4 fill-current text-white" />
+                <span>Connect via WhatsApp</span>
               </button>
-              <p className="text-[11px] text-center text-slate-400 font-semibold">
+              <p className="text-[11px] text-center text-slate-500 font-normal">
                 Instant connection. No spam, no registration needed.
               </p>
             </div>

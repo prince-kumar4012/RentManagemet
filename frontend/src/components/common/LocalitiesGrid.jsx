@@ -1,29 +1,30 @@
 'use client';
 
-import { MapPin } from 'lucide-react';
+import { GoogleMapsIcon } from '@/components/common/Icons';
 import { useLanguage } from '@/context/LanguageContext';
 import LOCALITIES_CONTENT from './localities.content';
 
 export default function LocalitiesGrid({ variant = 'footer' }) {
-  const { lang } = useLanguage();
+  const { isHi } = useLanguage();
+  const lang = isHi ? 'hi' : 'en';
   const c = LOCALITIES_CONTENT[lang] || LOCALITIES_CONTENT.en;
 
   if (variant === 'footer') {
     return (
-      <div className="pt-6">
+      <div className="pt-2">
         <div className="flex items-center gap-2 mb-4">
-          <MapPin className="w-4 h-4 text-dpxTeal" />
-          <h4 className="text-white font-black text-xs uppercase tracking-widest">
+          <GoogleMapsIcon className="w-4 h-4 text-[#00A3AD] fill-current" />
+          <h4 className="text-white font-extrabold text-xs uppercase tracking-widest">
             {c.title}
           </h4>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-x-6 gap-y-2 text-xs font-medium text-slate-400">
+        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-x-6 gap-y-2.5 text-xs font-medium text-slate-400">
           {c.items.map((loc) => (
             <div
               key={loc}
-              className="hover:text-dpxTeal transition-colors cursor-pointer flex items-center gap-2 group"
+              className="hover:text-[#00A3AD] transition-colors cursor-pointer flex items-center gap-2 group"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-slate-700 group-hover:bg-dpxTeal transition-colors shrink-0" />
+              <span className="w-1.5 h-1.5 rounded-full bg-slate-700 group-hover:bg-[#00A3AD] transition-colors shrink-0" />
               <span className="truncate">{loc}</span>
             </div>
           ))}
@@ -35,8 +36,8 @@ export default function LocalitiesGrid({ variant = 'footer' }) {
   return (
     <div className="pt-4">
       <div className="flex items-center gap-2 mb-4">
-        <MapPin className="w-4 h-4 text-dpxTeal" />
-        <h3 className="font-black text-dpxNavy text-xs sm:text-sm uppercase tracking-widest">
+        <GoogleMapsIcon className="w-4 h-4 text-[#00A3AD] fill-current" />
+        <h3 className="font-extrabold text-dpxNavy text-xs sm:text-sm uppercase tracking-widest">
           {c.title}
         </h3>
       </div>
@@ -45,9 +46,9 @@ export default function LocalitiesGrid({ variant = 'footer' }) {
         {c.items.map((loc) => (
           <div
             key={loc}
-            className="flex items-center gap-2 text-xs font-semibold text-slate-700 hover:text-dpxTeal transition-colors cursor-pointer group"
+            className="flex items-center gap-2 text-xs font-semibold text-slate-700 hover:text-[#00A3AD] transition-colors cursor-pointer group"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-dpxTeal/60 group-hover:bg-dpxTeal shrink-0" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#00A3AD]/60 group-hover:bg-[#00A3AD] shrink-0" />
             <span className="truncate">{loc}</span>
           </div>
         ))}

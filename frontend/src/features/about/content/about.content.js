@@ -5,20 +5,20 @@ export const ABOUT_CONTENT = {
     hero_eyebrow: 'About Chander Vihar Property Exchange',
     hero_title: "More Than a Locality. It's a Community.",
     hero_body:
-      "Chander Vihar, Nilothi is a residential neighbourhood in West Delhi with a mix of independent houses, builder floors and residential properties. For the people who live here, work here and do business here — Chander Vihar is more than an address. It's a neighbourhood built around people.",
+      "Chander Vihar, Nilothi is a residential neighbourhood in West Delhi with a mix of independent houses, builder floors, and residential properties. For the people who live here, work here, and do business here — Chander Vihar is more than an address. It's a neighbourhood built around people.",
 
     about_eyebrow: 'About Chander Vihar',
     about_title: 'A Community Where Every Property Conversation Matters.',
     about_body:
-      'Families, homeowners, tenants, buyers, sellers, property consultants and local businesses all form part of this local community. And that is where we come in.',
+      'Families, homeowners, tenants, buyers, sellers, property consultants, and local businesses all form part of this local community. And that is where we come in.',
     about_body2:
-      'Chander Vihar Property Exchange is built with a simple purpose — to make local property connections easier, more transparent and more meaningful. We believe that when people have access to the right local connection and clear communication, they can approach property decisions with greater confidence.',
+      'Chander Vihar Property Exchange is built with a simple purpose — to make local property connections easier, more transparent, and more meaningful. We believe that when people have access to the right local connection and clear communication, they can approach property decisions with greater confidence.',
 
     glance_eyebrow: 'Chander Vihar at a Glance',
     glance_title: 'A Local Community. A Growing Property Environment.',
     glance_items: [
-      { icon: Home, title: 'Residential Community', desc: 'A neighbourhood where homes, families and everyday life come together.', color: '#00A3AD' },
-      { icon: Briefcase, title: 'Local Property Activity', desc: 'Independent houses, builder floors and residential property requirements form part of the local property environment.', color: '#FF9900' },
+      { icon: Home, title: 'Residential Community', desc: 'A neighbourhood where homes, families, and everyday life come together.', color: '#00A3AD' },
+      { icon: Briefcase, title: 'Local Property Activity', desc: 'Independent houses, builder floors, and residential property requirements form part of the local property environment.', color: '#FF9900' },
       { icon: MapPin, title: 'Connected Neighbourhoods', desc: 'Chander Vihar is part of the wider Nilothi area and its surrounding residential ecosystem.', color: '#22c55e' },
       { icon: Users, title: 'Local Businesses & Services', desc: 'Everyday businesses and services contribute to the convenience and character of the local community.', color: '#11284A' },
       { icon: Heart, title: 'People & Relationships', desc: 'The strongest part of any local property network is the people behind it.', color: '#AE2721' },
@@ -27,7 +27,7 @@ export const ABOUT_CONTENT = {
     why_eyebrow: 'Why Chander Vihar Matters',
     why_title: 'A Place People Call Home.',
     why_body:
-      'Chander Vihar is not just about properties and buildings. It is about homes, families, neighbourhoods and everyday connections. That local understanding matters when someone is making an important property decision.',
+      'Chander Vihar is not just about properties and buildings. It is about homes, families, neighbourhoods, and everyday connections. That local understanding matters when someone is making an important property decision.',
     why_philosophy: 'Our Philosophy Is Simple:',
     why_points: [
       'Know the locality.',
@@ -41,11 +41,11 @@ export const ABOUT_CONTENT = {
     approach_title: 'Built Around Trust. Driven By Connections.',
     approach_points: [
       { title: 'Local Understanding', desc: 'We keep our focus close to the local community and its property environment.' },
-      { title: 'Trusted Connections', desc: 'We help property seekers, owners and local professionals connect around genuine requirements.' },
+      { title: 'Trusted Connections', desc: 'We help property seekers, owners, and local professionals connect around genuine requirements.' },
       { title: 'Clear Communication', desc: 'Every good property conversation should begin with clarity and transparency.' },
-      { title: 'People First', desc: 'Behind every property requirement is a person, a family or a business. We put people and relationships first.' },
+      { title: 'People First', desc: 'Behind every property requirement is a person, a family, or a business. We put people and relationships first.' },
       { title: 'Community Focused', desc: 'Our goal is to build a stronger and more connected local property community.' },
-      { title: 'Simple Process', desc: 'We keep the initial property connection simple, direct and easy to understand.' },
+      { title: 'Simple Process', desc: 'We keep the initial property connection simple, direct, and easy to understand.' },
     ],
 
     behind_eyebrow: 'Behind Chander Vihar',
@@ -60,14 +60,14 @@ export const ABOUT_CONTENT = {
       'Make Connections More Meaningful.',
       'Make the Local Property Experience More Trustworthy.',
     ],
-    behind_quote: '"The right property journey starts with the right connection."',
+    behind_quote: 'The right property journey starts with the right connection.',
     behind_message_label: 'Personal Message',
     behind_message:
-      '"Our aim is to create a local network where people can connect with confidence, communicate clearly and find the right direction for their property needs."',
+      'Our aim is to create a local network where people can connect with confidence, communicate clearly, and find the right direction for their property needs.',
     behind_belief:
-      "Chander Vihar Property Exchange is built around a belief that property is not only about buying, selling or renting. It's About People. It's About Relationships. It's About Trust.",
+      "Chander Vihar Property Exchange is built around a belief that property is not only about buying, selling, or renting. It's About People. It's About Relationships. It's About Trust.",
     behind_initiatives_title: 'Ground-Level Civic & Social Initiatives in Chander Vihar',
-    behind_initiatives_subtitle: 'Ekta, Vikas Aur Samaj Seva — Ground Work by Sukhvinder Pajji & Team Chander Vihar Ki Khoobsurti',
+    behind_initiatives_subtitle: 'Unity, Growth & Social Service — Ground Work by Sukhvinder Pajji & Team Chander Vihar',
     behind_initiatives: [
       {
         title: 'Traffic & Shri Khanda Sahib Chowk',
@@ -87,7 +87,7 @@ export const ABOUT_CONTENT = {
       {
         title: 'Cleanliness & Garbage Drives',
         desc: 'Organizing regular cleanliness drives, timely garbage collection, and promoting community hygiene to keep Chander Vihar beautiful.',
-        category: 'Swachhata Drive',
+        category: 'Cleanliness Drive',
       },
       {
         title: 'Anti-Encroachment & Road Rights',
@@ -105,12 +105,12 @@ export const ABOUT_CONTENT = {
         category: 'Youth & Future',
       },
       {
-        title: 'Government Schemes & Voter Assistance',
-        desc: 'Guiding residents on government welfare benefits, doorstep civic services, and voter ID registration campaigns.',
+        title: 'Government Schemes & Citizen Assistance',
+        desc: 'Guiding residents on government welfare benefits, doorstep civic services, and civic documentation campaigns.',
         category: 'Citizen Guidance',
       },
     ],
-    behind_facebook_heading: 'Team Chander Vihar Ki Khoobsurti Official Facebook Page',
+    behind_facebook_heading: 'Team Chander Vihar Official Facebook Community',
     behind_facebook_desc: 'Stay updated with local community development, raise civic concerns, and participate in social service initiatives through our official Facebook community channel.',
     behind_facebook_cta: 'Visit Facebook Page',
     behind_facebook_url: 'https://www.facebook.com/share/1CjeqYtR17/',
@@ -135,75 +135,75 @@ export const ABOUT_CONTENT = {
 
   hi: {
     hero_eyebrow: 'चंदर विहार प्रॉपर्टी एक्सचेंज के बारे में',
-    hero_title: 'केवल एक इलाका नहीं। एक कम्युनिटी है।',
+    hero_title: 'केवल एक इलाका नहीं। यह एक परिवार है।',
     hero_body:
-      'चंदर विहार, निलोठी पश्चिमी दिल्ली का एक रिहायशी क्षेत्र है, जहां स्वतंत्र मकान, बिल्डर फ्लोर और अन्य रिहायशी प्रॉपर्टीज देखने को मिलती हैं। यहां रहने, काम करने और व्यवसाय करने वाले लोगों के लिए चंदर विहार केवल एक पता नहीं है — यह लोगों से बना एक मोहल्ला है।',
+      'चंदर विहार, निलोठी पश्चिमी दिल्ली का एक रिहायशी क्षेत्र है, जहां स्वतंत्र मकान, बिल्डर फ्लोर और आवासीय संपत्तियां देखने को मिलती हैं। यहां रहने वाले, कार्य करने वाले और व्यापार करने वाले निवासियों के लिए चंदर विहार केवल एक पता नहीं है — यह लोगों के आपसी विश्वास से बना एक समृद्ध क्षेत्र है।',
 
     about_eyebrow: 'चंदर विहार के बारे में',
-    about_title: 'एक ऐसी कम्युनिटी जहां हर प्रॉपर्टी बातचीत मायने रखती है।',
+    about_title: 'एक ऐसा समुदाय जहां हर प्रॉपर्टी संवाद अत्यंत महत्वपूर्ण है।',
     about_body:
-      'परिवार, मकान मालिक, किरायेदार, खरीदार, विक्रेता, प्रॉपर्टी कंसल्टेंट्स और स्थानीय व्यवसाय — सभी इस स्थानीय कम्युनिटी का हिस्सा हैं। और यहीं से हमारी भूमिका शुरू होती है।',
+      'परिवार, मकान मालिक, किराएदार, खरीदार, विक्रेता, प्रॉपर्टी सलाहकार और स्थानीय व्यवसाय — सभी इस स्थानीय समुदाय का अभिन्न अंग हैं। और यहीं से हमारी सहभागिता आरंभ होती है।',
     about_body2:
-      'चंदर विहार प्रॉपर्टी एक्सचेंज का उद्देश्य स्थानीय प्रॉपर्टी कनेक्शन्स को आसान, स्पष्ट, पारदर्शी और अधिक meaningful बनाना है। हमारा मानना है कि जब लोगों को सही स्थानीय कनेक्शन और स्पष्ट जानकारी मिलती है, तो वे अपने प्रॉपर्टी से जुड़े फैसले अधिक confidence के साथ ले सकते हैं।',
+      'चंदर विहार प्रॉपर्टी एक्सचेंज की स्थापना एक सरल उद्देश्य के साथ की गई है — स्थानीय प्रॉपर्टी संपर्कों को अधिक सुगम, पारदर्शी और अर्थपूर्ण बनाना। हमारा दृढ़ विश्वास है कि जब निवासियों को सही स्थानीय संपर्क और स्पष्ट जानकारी मिलती है, तब वे प्रॉपर्टी से जुड़े निर्णय पूर्ण आत्मविश्वास के साथ ले सकते हैं।',
 
     glance_eyebrow: 'चंदर विहार एक नज़र में',
-    glance_title: 'एक स्थानीय कम्युनिटी। एक सक्रिय प्रॉपर्टी वातावरण।',
+    glance_title: 'एक एकजुट समुदाय। एक प्रगतिशील प्रॉपर्टी वातावरण।',
     glance_items: [
-      { icon: Home, title: 'रिहायशी कम्युनिटी', desc: 'एक ऐसा इलाका जहां घर, परिवार और रोजमर्रा की जिंदगी एक साथ जुड़ी हुई है।', color: '#00A3AD' },
-      { icon: Briefcase, title: 'स्थानीय प्रॉपर्टी गतिविधियां', desc: 'स्वतंत्र मकान, बिल्डर फ्लोर और रिहायशी प्रॉपर्टी से जुड़ी जरूरतें स्थानीय प्रॉपर्टी वातावरण का हिस्सा हैं।', color: '#FF9900' },
-      { icon: MapPin, title: 'आसपास के जुड़े क्षेत्र', desc: 'चंदर विहार व्यापक निलोठी क्षेत्र और आसपास के रिहायशी इलाकों का हिस्सा है।', color: '#22c55e' },
-      { icon: Users, title: 'स्थानीय व्यवसाय और सेवाएं', desc: 'स्थानीय दुकानें, सेवाएं और व्यवसाय क्षेत्र की सुविधा और कम्युनिटी की पहचान में योगदान देते हैं।', color: '#11284A' },
-      { icon: Heart, title: 'लोग और रिश्ते', desc: 'किसी भी स्थानीय प्रॉपर्टी नेटवर्क की सबसे बड़ी ताकत वहां के लोग और उनके रिश्ते होते हैं।', color: '#AE2721' },
+      { icon: Home, title: 'रिहायशी समुदाय', desc: 'एक ऐसा क्षेत्र जहां आवास, परिवार और दैनिक जीवन का सामंजस्य है।', color: '#00A3AD' },
+      { icon: Briefcase, title: 'स्थानीय प्रॉपर्टी गतिविधियां', desc: 'स्वतंत्र मकान, बिल्डर फ्लोर एवं रिहायशी प्रॉपर्टी से जुड़ी जरूरतें हमारे स्थानीय वातावरण का हिस्सा हैं।', color: '#FF9900' },
+      { icon: MapPin, title: 'समीपवर्ती क्षेत्र', desc: 'चंदर विहार विस्तृत निलोठी क्षेत्र और आसपास की कॉलोनियों से पूर्णतः जुड़ा हुआ है।', color: '#22c55e' },
+      { icon: Users, title: 'स्थानीय व्यवसाय व सेवाएं', desc: 'स्थानीय दुकानें, सेवाएं और प्रतिष्ठान समुदाय की सुविधा और पहचान में अमूल्य योगदान देते हैं।', color: '#11284A' },
+      { icon: Heart, title: 'निवासी व संबंध', desc: 'किसी भी नेटवर्क की वास्तविक शक्ति वहां के निवासी और उनका परस्पर विश्वास है।', color: '#AE2721' },
     ],
 
-    why_eyebrow: 'चंदर विहार क्यों महत्वपूर्ण है',
-    why_title: 'एक ऐसी जगह जिसे लोग अपना घर कहते हैं।',
+    why_eyebrow: 'चंदर विहार का महत्व',
+    why_title: 'एक ऐसा स्थान जिसे लोग अपना घर कहते हैं।',
     why_body:
-      'चंदर विहार केवल प्रॉपर्टीज और इमारतों के बारे में नहीं है। यह घरों, परिवारों, पड़ोस और रोजमर्रा के रिश्तों के बारे में है। जब कोई व्यक्ति प्रॉपर्टी से जुड़ा महत्वपूर्ण फैसला लेता है, तो स्थानीय जानकारी और क्षेत्र की समझ बहुत मायने रखती है।',
+      'चंदर विहार केवल इमारतों का समूह नहीं है। यह घरों, परिवारों, पड़ोसियों और दैनिक आत्मीय संबंधों का प्रतीक है। जब कोई निवासी अपनी संपत्ति का महत्वपूर्ण निर्णय लेता है, तो स्थानीय समझ और विशेषज्ञता अत्यंत आवश्यक होती है।',
     why_philosophy: 'हमारा सिद्धांत सरल है:',
     why_points: [
-      'इलाके को समझें।',
-      'जरूरत को समझें।',
-      'सही लोगों को जोड़ें।',
-      'लोगों को बेहतर जानकारी के साथ निर्णय लेने दें।',
+      'क्षेत्र को अच्छी तरह समझें।',
+      'आवश्यकता का सही आंकलन करें।',
+      'सही लोगों को आपस में जोड़ें।',
+      'निवासियों को पूर्ण जानकारी के साथ निर्णय लेने दें।',
     ],
-    why_support: 'क्योंकि बेहतर प्रॉपर्टी बातचीत की शुरुआत स्थानीय समझ से होती है।',
+    why_support: 'क्योंकि सर्वोत्तम प्रॉपर्टी निर्णयों की शुरुआत स्थानीय समझ से होती है।',
 
-    approach_eyebrow: 'हमारा दृष्टिकोण',
-    approach_title: 'भरोसे पर आधारित। कनेक्शन्स से संचालित।',
+    approach_eyebrow: 'हमारा कार्य दृष्टिकोण',
+    approach_title: 'विश्वास पर निर्मित। निष्पक्षता से संचालित।',
     approach_points: [
-      { title: 'स्थानीय समझ', desc: 'हमारा फोकस स्थानीय कम्युनिटी और उसके प्रॉपर्टी वातावरण को समझने पर है।' },
-      { title: 'भरोसेमंद कनेक्शन', desc: 'हम प्रॉपर्टी seekers, owners और स्थानीय प्रोफेशनल्स को उनकी genuine जरूरतों के आधार पर जोड़ते हैं।' },
-      { title: 'स्पष्ट बातचीत', desc: 'हमारा मानना है कि हर अच्छी प्रॉपर्टी बातचीत की शुरुआत clarity और transparency से होनी चाहिए।' },
-      { title: 'लोग सबसे पहले', desc: 'हर प्रॉपर्टी requirement के पीछे कोई व्यक्ति, परिवार या व्यवसाय होता है। हम लोगों और रिश्तों को महत्व देते हैं।' },
-      { title: 'कम्युनिटी पर फोकस', desc: 'हमारा उद्देश्य एक मजबूत और बेहतर connected स्थानीय प्रॉपर्टी कम्युनिटी बनाना है।' },
-      { title: 'सरल प्रक्रिया', desc: 'हम शुरुआती प्रॉपर्टी कनेक्शन को सरल, सीधा और समझने में आसान रखते हैं।' },
+      { title: 'स्थानीय समझ', desc: 'हमारा ध्यान सदैव स्थानीय समुदाय और उसके प्रॉपर्टी वातावरण को समझने पर केंद्रित रहता है।' },
+      { title: 'भरोसेमंद संपर्क', desc: 'हम खरीदारों, विक्रेताओं और स्थानीय विशेषज्ञों को उनकी वास्तविक आवश्यकताओं के आधार पर जोड़ते हैं।' },
+      { title: 'स्पष्ट संवाद', desc: 'हमारा मानना है कि हर अच्छे प्रॉपर्टी सौदे की शुरुआत स्पष्टता और पारदर्शिता से होनी चाहिए।' },
+      { title: 'जन प्राथमिकता', desc: 'हर प्रॉपर्टी आवश्यकता के पीछे एक परिवार या व्यवसाय होता है। हम मानवीय संबंधों को प्राथमिकता देते हैं।' },
+      { title: 'सामुदायिक विकास', desc: 'हमारा लक्ष्य एक सशक्त और सुसंगठित स्थानीय प्रॉपर्टी समुदाय का निर्माण करना है।' },
+      { title: 'सरल एवं सुगम प्रक्रिया', desc: 'हम प्रारंभिक प्रॉपर्टी संवाद को सरल, सीधा और सुगम बनाए रखते हैं।' },
     ],
 
-    behind_eyebrow: 'चंदर विहार के पीछे की सोच',
-    behind_title: 'इस नेटवर्क के पीछे का व्यक्ति।',
-    behind_name: 'Sukhvinder Pajji',
-    behind_subtitle: 'एक people-first approach, जिसका उद्देश्य मजबूत स्थानीय प्रॉपर्टी नेटवर्क बनाना है।',
+    behind_eyebrow: 'चंदर विहार की सोच',
+    behind_title: 'इस नेटवर्क के पीछे का व्यक्तित्व।',
+    behind_name: 'सुखविंदर पाजी',
+    behind_subtitle: 'एक जन-केंद्रित दृष्टिकोण, जिसका लक्ष्य एक सशक्त स्थानीय नेटवर्क बनाना है।',
     behind_body:
-      'चंदर विहार प्रॉपर्टी एक्सचेंज के पीछे सुखविंदर पज्जी की सोच है, जिसका उद्देश्य भरोसेमंद स्थानीय कनेक्शन्स के माध्यम से लोगों और प्रॉपर्टी प्रोफेशनल्स को करीब लाना है।',
-    behind_idea: 'सोच सरल है:',
+      'चंदर विहार प्रॉपर्टी एक्सचेंज के पीछे सुखविंदर पाजी की दूरदर्शी सोच है, जिसका उद्देश्य निष्पक्ष संपर्कों के माध्यम से निवासियों और विशेषज्ञों को करीब लाना है।',
+    behind_idea: 'मूल विचार अत्यंत सरल है:',
     behind_points: [
-      'प्रॉपर्टी की बातचीत को आसान बनाना।',
-      'कनेक्शन्स को अधिक meaningful बनाना।',
-      'स्थानीय प्रॉपर्टी अनुभव को अधिक भरोसेमंद बनाना।',
+      'प्रॉपर्टी संवाद को सुगम बनाना।',
+      'संपर्कों को अधिक अर्थपूर्ण बनाना।',
+      'स्थानीय प्रॉपर्टी अनुभव को अधिक विश्वसनीय बनाना।',
     ],
-    behind_quote: '"सही प्रॉपर्टी यात्रा की शुरुआत सही कनेक्शन से होती है।"',
+    behind_quote: 'उत्कृष्ट प्रॉपर्टी यात्रा की शुरुआत सही और सच्चे संपर्क से होती है।',
     behind_message_label: 'व्यक्तिगत संदेश',
     behind_message:
-      '"हमारा उद्देश्य एक ऐसा स्थानीय नेटवर्क बनाना है जहां लोग confidence के साथ जुड़ सकें, स्पष्ट रूप से बातचीत कर सकें और अपनी प्रॉपर्टी जरूरतों के लिए सही दिशा पा सकें।"' ,
+      'हमारा उद्देश्य एक ऐसा स्थानीय वातावरण निर्मित करना है जहां निवासी पूर्ण विश्वास के साथ जुड़ सकें, स्पष्ट चर्चा कर सकें और अपनी संपत्ति की सही दिशा पा सकें।',
     behind_belief:
-      'चंदर विहार प्रॉपर्टी एक्सचेंज इस सोच पर आधारित है कि प्रॉपर्टी केवल खरीदने, बेचने या किराए पर लेने का नाम नहीं है। यह लोगों के बारे में है। यह रिश्तों के बारे में है। यह भरोसे के बारे में है।',
-    behind_initiatives_title: 'चंदर विहार में ग्राउंड-लेवल नागरिक व सामाजिक कार्य',
-    behind_initiatives_subtitle: 'एकता, विकास और समाज सेवा — सुखविंदर पज्जी व Team Chander Vihar Ki Khoobsurti की ज़मीनी पहल',
+      'चंदर विहार प्रॉपर्टी एक्सचेंज इस सिद्धांत पर आधारित है कि संपत्ति केवल खरीदने या बेचने का नाम नहीं है। यह लोगों के बारे में है। यह आपसी विश्वास और संबंधों के बारे में है।',
+    behind_initiatives_title: 'चंदर विहार में ज़मीनी नागरिक व सामाजिक कार्य',
+    behind_initiatives_subtitle: 'एकता, विकास और समाज सेवा — सुखविंदर पाजी व टीम चंदर विहार की ज़मीनी पहल',
     behind_initiatives: [
       {
         title: 'ट्रैफिक प्रबंधन व श्री खांडा साहिब चौक विकास',
-        desc: 'श्री खांडा साहिब चौक पर ट्रैफिक जाम की समस्या का स्थायी समाधान, सुगम आवागमन व यातायात नियंत्रण के लिए निरंतर जमीनी प्रयास।',
+        desc: 'श्री खांडा साहिब चौक पर यातायात जाम की समस्या का स्थायी समाधान, सुगम आवागमन व यातायात नियंत्रण के लिए निरंतर जमीनी प्रयास।',
         category: 'नागरिक बुनियादी ढांचा',
       },
       {
@@ -237,32 +237,32 @@ export const ABOUT_CONTENT = {
         category: 'युवा शक्ति',
       },
       {
-        title: 'सरकारी योजनाएं व मतदाता पंजीयन',
-        desc: 'जनता को सरकारी कल्याणकारी योजनाओं का लाभ दिलाने और नए मतदाताओं के पंजीयन के लिए मार्गदर्शन शिविर आयोजित करना।',
+        title: 'सरकारी योजनाएं व नागरिक सहायता',
+        desc: 'जनता को सरकारी कल्याणकारी योजनाओं का लाभ दिलाने और नागरिक सहायता के लिए मार्गदर्शन शिविर आयोजित करना।',
         category: 'जन सहायता',
       },
     ],
-    behind_facebook_heading: 'Team Chander Vihar Ki Khoobsurti ऑफिशियल फेसबुक पेज',
-    behind_facebook_desc: 'कॉलोनी के विकास, नागरिक समस्याओं के समाधान और सामाजिक गतिविधियों की ताज़ा जानकारी के लिए हमारे ऑफिशियल फेसबुक पेज से जुड़ें।',
-    behind_facebook_cta: 'ऑफिशियल फेसबुक पेज देखें',
+    behind_facebook_heading: 'टीम चंदर विहार आधिकारिक फेसबुक कम्युनिटी',
+    behind_facebook_desc: 'कॉलोनी के विकास, नागरिक समस्याओं के समाधान और सामाजिक गतिविधियों की ताज़ा जानकारी के लिए हमारे आधिकारिक फेसबुक पेज से जुड़ें।',
+    behind_facebook_cta: 'आधिकारिक फेसबुक पेज देखें',
     behind_facebook_url: 'https://www.facebook.com/share/1CjeqYtR17/',
 
-    vision_eyebrow: 'हमारा विज़न',
-    vision_title: 'एक मजबूत स्थानीय प्रॉपर्टी कम्युनिटी का निर्माण।',
+    vision_eyebrow: 'हमारा दृष्टिकोण',
+    vision_title: 'एक मजबूत स्थानीय प्रॉपर्टी समुदाय का निर्माण।',
     vision_body:
-      'हमारा विज़न एक ऐसा प्रॉपर्टी नेटवर्क बनाना है जहां लोगों को प्रॉपर्टी से जुड़ी सहायता की जरूरत पड़ने पर यह महसूस न हो कि उन्हें शुरुआत कहां से करनी है। हम मजबूत कनेक्शन बनाना चाहते हैं — प्रॉपर्टी की तलाश करने वाले लोगों और स्थानीय प्रॉपर्टी वातावरण को समझने वाले लोगों के बीच।',
-    vision_direction: 'हमारी Long-Term Direction',
+      'हमारा लक्ष्य एक ऐसा प्रॉपर्टी नेटवर्क तैयार करना है जहां निवासियों को आवश्यकता पड़ने पर उचित मार्गदर्शन प्राप्त हो सके। हम संपत्तियों की तलाश करने वाले व्यक्तियों और स्थानीय वातावरण की समझ रखने वाले विशेषज्ञों के मध्य मजबूत संपर्क स्थापित करना चाहते हैं।',
+    vision_direction: 'हमारी दीर्घकालिक दिशा',
     vision_points: [
-      'अधिक लोगों को जोड़ना।',
-      'अधिक भरोसा बनाना।',
-      'बेहतर बातचीत को बढ़ावा देना।',
-      'स्थानीय कम्युनिटी को मजबूत बनाना।',
+      'अधिक निवासियों को जोड़ना।',
+      'आपसी विश्वास को सुदृढ़ बनाना।',
+      'सार्थक संवाद को बढ़ावा देना।',
+      'स्थानीय समुदाय को सशक्त बनाना।',
     ],
 
-    cta_title: 'हमसे बातचीत शुरू करें।',
-    cta_body: 'चाहे आपके पास प्रॉपर्टी से जुड़ी जरूरत हो या आप केवल यह समझना चाहते हों कि हम कैसे काम करते हैं — आइए, जुड़ते हैं।',
+    cta_title: 'हमसे संवाद आरंभ करें।',
+    cta_body: 'चाहे आपकी कोई प्रॉपर्टी आवश्यकता हो या आप हमारी कार्यप्रणाली समझना चाहते हों — आइए, जुड़ते हैं।',
     cta_btn1: 'हमसे बात करें',
-    cta_btn2: 'WhatsApp करें',
+    cta_btn2: 'व्हाट्सएप करें',
   },
 };
 

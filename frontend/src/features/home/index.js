@@ -4,15 +4,14 @@ import { useState } from 'react';
 import { useLanguage } from '@/context/LanguageContext';
 import HOME_CONTENT from './content/home.content';
 import HeroSection from './components/HeroSection';
-import StatsSection from './components/StatsSection';
 import ServicesSection from './components/ServicesSection';
 import StorySection from './components/StorySection';
-import HamaraSafarSection from './components/HamaraSafarSection';
 import HowItWorksSection from './components/HowItWorksSection';
-import MediaSection from './components/MediaSection';
 import DifferenceSection from './components/DifferenceSection';
 import HomeFounderSection from './components/HomeFounderSection';
-import CommunitySection from './components/CommunitySection';
+import CommunityGallerySection from './components/CommunityGallerySection';
+import MediaSection from './components/MediaSection';
+import StatsSection from './components/StatsSection';
 import CtaSection from './components/CtaSection';
 import { InquiryModal } from '@/components/ui';
 
@@ -31,18 +30,37 @@ export function HomeView() {
 
   return (
     <div className={isHi ? 'devanagari' : ''}>
+      {/* 1. Hero Section (Kept 100% exact to user's screenshot 1) */}
       <HeroSection content={content} isHi={isHi} onOpenInquiry={handleOpenInquiry} />
-      <StatsSection isHi={isHi} />
+
+      {/* 2. Property Services Section (Kept 100% exact to user's screenshot 2) */}
       <ServicesSection content={content} isHi={isHi} onOpenInquiry={handleOpenInquiry} />
-      <HamaraSafarSection content={content} />
+
+      {/* 3. Our Foundation / Story Section */}
       <StorySection content={content} isHi={isHi} />
+
+      {/* 4. How It Works Section */}
       <HowItWorksSection content={content} onOpenInquiry={handleOpenInquiry} />
-      <MediaSection content={content} />
+
+      {/* 5. CVP Exchange Difference Section */}
       <DifferenceSection content={content} />
+
+      {/* 6. Founder & Team Section */}
       <HomeFounderSection content={content} isHi={isHi} />
-      <CommunitySection isHi={isHi} />
+
+      {/* 7. Ground Action Photo Gallery */}
+      <CommunityGallerySection isHi={isHi} />
+
+      {/* 8. Facebook & YouTube Media Section */}
+      <MediaSection content={content} />
+
+      {/* 9. Testimonials & Community Trust Section */}
+      <StatsSection isHi={isHi} />
+
+      {/* 10. Bottom CTA Section */}
       <CtaSection content={content} isHi={isHi} onOpenInquiry={handleOpenInquiry} />
 
+      {/* Modal */}
       <InquiryModal
         isOpen={inquiryModalOpen}
         onClose={() => setInquiryModalOpen(false)}

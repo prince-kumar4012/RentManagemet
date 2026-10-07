@@ -20,3 +20,10 @@ yarn-error.log*
 # OS files
 .DS_Store
 Thumbs.db
+
+# Video files & logs
+*.mp4
+*.webm
+*.mov
+*.avi
+*.log

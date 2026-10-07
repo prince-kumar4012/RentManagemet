@@ -6,30 +6,26 @@ import { ChevronDown } from 'lucide-react';
 function FaqItem({ q, a }) {
   const [open, setOpen] = useState(false);
   return (
-    <div
-      className={`rounded-xl overflow-hidden border transition-all duration-200 ${
-        open ? 'border-dpxTeal/60 bg-white shadow-md' : 'border-slate-200/90 bg-white'
-      }`}
-    >
+    <div className="p-5 sm:p-6 rounded-[20px] border border-slate-200/80 bg-white mb-4 shadow-2xs hover:shadow-md transition-all duration-300">
       <button
         onClick={() => setOpen(!open)}
-        className="w-full px-6 py-4.5 text-left flex items-center justify-between gap-4 bg-white hover:bg-slate-50/60 transition-colors"
+        className="w-full text-left flex items-center justify-between gap-4 bg-white transition-colors cursor-pointer"
       >
-        <span className={`font-extrabold text-base leading-snug transition-colors ${open ? 'text-dpxTeal' : 'text-dpxNavy'}`}>
+        <span className={`font-extrabold text-base sm:text-lg leading-snug tracking-tight transition-colors ${open ? 'text-[#00A3AD]' : 'text-[#0F172A]'}`}>
           {q}
         </span>
         <span
-          className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 transition-all duration-300 ${
-            open ? 'bg-dpxTeal text-white rotate-180' : 'bg-slate-100 text-slate-400'
+          className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${
+            open ? 'bg-[#00A3AD] text-white rotate-180 shadow-2xs' : 'bg-cyan-50 text-[#00A3AD]'
           }`}
         >
-          <ChevronDown className="w-4 h-4" />
+          <ChevronDown className="w-4 h-4 stroke-[2.5]" />
         </span>
       </button>
-      <div className={`overflow-hidden transition-all duration-300 ${open ? 'max-h-96' : 'max-h-0'}`}>
-        <div className="px-6 pb-5 pt-2 text-slate-600 text-sm leading-relaxed border-t border-slate-100 font-normal">
+      <div className={`overflow-hidden transition-all duration-300 ${open ? 'max-h-96 opacity-100 pt-3' : 'max-h-0 opacity-0'}`}>
+        <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-normal border-t border-slate-100 pt-3">
           {a}
-        </div>
+        </p>
       </div>
     </div>
   );
@@ -37,17 +33,17 @@ function FaqItem({ q, a }) {
 
 export default function ContactFaqSection({ content }) {
   return (
-    <section className="bg-white py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+    <section className="bg-slate-50/70 py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 border-b border-slate-100">
       <div className="max-w-3xl mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="inline-block bg-dpxTealLight text-dpxTeal text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider mb-3">
+          <p className="text-[#00A3AD] text-xs font-black uppercase tracking-widest mb-3">
             {content.faq_eyebrow}
-          </span>
-          <h2 className="text-3xl md:text-4xl font-black text-dpxNavy tracking-tight">
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight">
             {content.faq_title}
           </h2>
         </div>
-        <div className="space-y-3">
+        <div>
           {content.faqs.map((faq) => (
             <FaqItem key={faq.q} q={faq.q} a={faq.a} />
           ))}

@@ -5,6 +5,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-manrope)', 'Manrope', 'sans-serif'],
+        devanagari: ['var(--font-devanagari)', 'Noto Sans Devanagari', 'sans-serif'],
+      },
       colors: {
         dpxTeal:        'var(--color-teal)',
         dpxTealDark:    'var(--color-teal-dark)',
